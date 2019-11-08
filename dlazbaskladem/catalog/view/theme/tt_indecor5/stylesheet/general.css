@@ -1,0 +1,78 @@
+/*header begin*/
+.header-top .container-inner {
+    margin-top: -10px;
+}
+.top-contacts {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 16px;
+
+}
+
+.top-contacts div {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.top-contacts a {
+    color: white;
+    font-weight: 500;
+}
+
+.top-contacts i {
+
+    margin-right: 7px;
+
+    width: 15px;
+
+    height: 15px;
+
+    display: inline-block;
+
+    background-size: cover !important;
+}
+
+.top-tel i{
+    background: url(/image/icon/phone.svg);
+}
+.top-mail i{
+    background: url(/image/icon/mail.svg);
+}
+
+.common-home header {
+    position: absolute;
+    background: #262626;
+    z-index: 7;
+
+}
+div#cart {
+    margin-left: 10px;
+
+}
+
+#cart > button:before{
+
+    content: "";
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background-image: url(/image/icon/cart.svg);
+}
+
+#cart > button {
+    display: flex;
+    align-items: center;
+}
+/*header end*/
+
+
+
+/*home begin*/
+.desc-subcat {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+/*home end*/
