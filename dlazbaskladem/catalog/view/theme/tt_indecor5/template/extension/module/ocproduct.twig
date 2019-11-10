@@ -1,4 +1,9 @@
 <div class="tt_product_module{% if config_module.row >=2 %}{{' multi-rows'}}{% endif %} {{ config_module.class }}" id="product_module{{ config_module.module_id }}">
+	{% if config_module.class=='featured-products'%}
+		<div class="static-bottom-indecor1 go-catalog row_items {% if not config_module.slider %}{{ class }}{% endif %} {% if i % 2 == 0 %}even{% else %}odd{% endif %}">
+			<a class="link" href="/index.php?route=product/category&path=0">Показать весь каталог</a>
+		</div>
+	{% endif %}
     <div class="module-title">
 	  {% if config_module.sub_title_lang[code].sub_title %}
 		  <p class="sub-title">{{ config_module.sub_title_lang[code].sub_title }}</p>
@@ -43,7 +48,8 @@
 		{% set count = 0 %}
 		{% set i = 0 %}
     <div class="owl-container">
-	<div class="tt-product {{ class_slider }}">	
+	<div class="tt-product {{ class_slider }}">
+
         {% for product in products %}
 			{% if not config_module.slider %}{% set rows = 1 %}{% endif %}
             <!-- Grid -->

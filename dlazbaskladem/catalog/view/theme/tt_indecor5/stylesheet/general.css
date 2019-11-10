@@ -1,5 +1,6 @@
 /*header begin*/
-.header-top .container-inner {
+#logo{padding: 0}
+header .container-inner {
     margin-top: -10px;
 }
 .top-contacts {
@@ -10,7 +11,7 @@
 
 }
 
-.top-contacts div {
+.top-mail, .top-tel {
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
@@ -22,7 +23,7 @@
     font-weight: 500;
 }
 
-.top-contacts i {
+.top-tel i, .top-mail i {
 
     margin-right: 7px;
 
@@ -41,6 +42,14 @@
 .top-mail i{
     background: url(/image/icon/mail.svg);
 }
+.ma-corporate-about .top-tel i{
+    background: url(/image/icon/phone2.svg);
+}
+.ma-corporate-about .top-mail i{
+    background: url(/image/icon/mail2.svg);
+}
+
+
 
 .common-home header {
     position: absolute;
@@ -75,4 +84,53 @@ div#cart {
     margin-bottom: 15px;
     font-weight: 700;
 }
+.go-catalog {
+    padding-bottom: 30px;
+    height: 335px;
+    background-image: url("https://cdn.pixabay.com/photo/2014/10/16/01/03/shopping-490584_960_720.png");
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.go-catalog a.link {
+    height: 50px;
+}
+.go-catalog {
+    transition: 1s; /* Время эффекта */
+    margin-top: 33px;
+}
+.go-catalog:hover {
+    transform: scale(1.2);
+}
+.corporate-about-contacts {
+    display: flex;
+    clear: both;
+    justify-content: center;
+    padding-top: 30px;
+}
+.corporate-about-contacts a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.gmaps {
+    height: 450px;
+    width: 100%;
+    margin-top: 35px;
+    padding: 0 15px 0 15px;
+}
+.corporate-about-contacts a:hover {
+    color: inherit;
+}
 /*home end*/
+
+
+
+/*footer begin*/
+ul.footer-contact a {
+    color: inherit;
+}
+/*footer end*/
