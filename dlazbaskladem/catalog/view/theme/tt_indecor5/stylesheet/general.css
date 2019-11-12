@@ -1,14 +1,14 @@
 /*header begin*/
 #logo{padding: 0}
 header .container-inner {
-    margin-top: -10px;
+    margin-top: -15px;
 }
 .top-contacts {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
     font-size: 16px;
-
+    flex-wrap: wrap;
 }
 
 .top-mail, .top-tel {
@@ -75,6 +75,17 @@ div#cart {
     display: flex;
     align-items: center;
 }
+#logo a {
+    color: white;
+}
+
+#logo a:hover {
+    color: #ff7a5f;
+}
+
+#logo h1 {
+    padding-top: 15px;
+}
 /*header end*/
 
 
@@ -99,7 +110,7 @@ div#cart {
     height: 50px;
 }
 .go-catalog {
-    transition: 1s; /* Время эффекта */
+    transition: 1s; /* Ãâ€™Ã‘â‚¬ÃÂµÃÂ¼Ã‘Â Ã‘ÂÃ‘â€žÃ‘â€žÃÂµÃÂºÃ‘â€šÃÂ° */
     margin-top: 33px;
 }
 .go-catalog:hover {
@@ -110,6 +121,7 @@ div#cart {
     clear: both;
     justify-content: center;
     padding-top: 30px;
+    flex-wrap: wrap;
 }
 .corporate-about-contacts a {
     font-size: 16px;
@@ -125,6 +137,22 @@ div#cart {
 .corporate-about-contacts a:hover {
     color: inherit;
 }
+.static-middle-indecor5 .col {
+    width: 100%;
+}
+.price-box p.special-price .price {
+    color: red;
+    font-weight: 500;
+}
+.deal-producst .price {
+    font-size: 30px !important;
+}
+
+.deal-producst .label-product.label_sale{
+    font-size:20px;
+    color:red;
+    font-weight:500;
+}
 /*home end*/
 
 
@@ -133,4 +161,46 @@ div#cart {
 ul.footer-contact a {
     color: inherit;
 }
+.footer-top {
+    padding-bottom: 0;
+}
 /*footer end*/
+
+
+
+/*category begin*/
+@media (min-width: 1200px) {
+    .product-category .breadcrumbs.hasimage .container {
+        width: 100%;
+        padding: 0;
+    }
+    .product-category .breadcrumbs.hasimage .container img.img-thumbnail{
+        width:100%;
+        height:auto;
+    }
+    .btn-grid.btn-grid-2 {
+        display: inline-block;
+    }
+
+}
+
+.product-category #compare-total,  .product-category button.button.btn-wishlist, .product-category button.button.btn-compare {
+    display: none;
+}
+
+
+/*category end*/
+
+
+
+
+/*product begin*/
+li.stock-box {
+    font-weight: 700;
+    font-size: 120%;
+}
+.brand-box{display: none !important;}
+#product button.btn-wishlist, #product button.btn-compare{
+    display: none;
+}
+/*product end*/
