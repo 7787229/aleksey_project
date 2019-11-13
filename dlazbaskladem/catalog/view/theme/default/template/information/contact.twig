@@ -15,43 +15,31 @@
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}
       <h1>{{ heading_title }}</h1>
-      <h3>{{ text_location }}</h3>
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="row">
-            {% if image %}
-            <div class="col-sm-3"><img src="{{ image }}" alt="{{ store }}" title="{{ store }}" class="img-thumbnail" /></div>
-            {% endif %}
-            <div class="col-sm-3"><strong>{{ store }}</strong><br />
-              <address>
-              {{ address }}
-              </address>
-              {% if geocode %}
-              <a href="https://maps.google.com/maps?q={{ geocode|url_encode }}&hl={{ geocode_hl }}&t=m&z=15" target="_blank" class="btn btn-info"><i class="fa fa-map-marker"></i> {{ button_map }}</a>
-              {% endif %}
-            </div>
-            <div class="col-sm-3"><strong>{{ text_telephone }}</strong><br>
-              {{ telephone }}<br />
-              <br />
-              {% if fax %}
-              <strong>{{ text_fax }}</strong><br>
-              {{ fax }}
-              {% endif %}
-            </div>
-            <div class="col-sm-3">
-              {% if open %}
-              <strong>{{ text_open }}</strong><br />
-              {{ open }}<br />
-              <br />
-              {% endif %}
-              {% if comment %}
-              <strong>{{ text_comment }}</strong><br />
-              {{ comment }}
-              {% endif %}
-            </div>
-          </div>
+      <div class="container-contact">
+        <div class="mycontact">
+          <h1><span style="color: inherit; font-family: inherit; font-size: 27px;">SÍDLO FIRMY</span><br></h1>
+          <p>Kommand Team s.r.o. </p>
+          <p>Za Mototechnou 1619/1</p>
+          <p>15500 Praha 5</p>
+          <p>IČO 63978016</p>
+          <p>DIČ CZ63978016</p>
+          <p>tel: <a href="tel:+420776205826">+420 776 205 826</a></p>
+          <p>e-mail: <a href="mailto:">obchod@dlazbaskladem.cz</a></p>
+        </div>
+        <div class="mycontact2" style="margin-top: 8px;">
+          <h2>SKLAD – ODBĚROVÉ MÍSTO</h2>
+          <p>Za Roudnickou branou,  </p>
+          <p>27324 Velvary</p>
+          <p>15500 Praha 5</p>
+          <p>IČO 63978016</p>
+          <p>DIČ CZ63978016</p>
+          <p>tel: <a href="tel:+420776205826">+420 776 205 826</a></p>
+          <p>e-mail: <a href="mailto:">obchod@dlazbaskladem.cz</a></p>
         </div>
       </div>
+
+
+
       {% if locations %}
       <h3>{{ text_store }}</h3>
       <div class="panel-group" id="accordion">
@@ -102,7 +90,7 @@
       {% endif %}
       <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
-          <legend>{{ text_contact }}</legend>
+
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-name">{{ entry_name }}</label>
             <div class="col-sm-10">

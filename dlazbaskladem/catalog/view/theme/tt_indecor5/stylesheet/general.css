@@ -153,6 +153,13 @@ div#cart {
     color:red;
     font-weight:500;
 }
+button.button.btn-wishlist {
+    display: none;
+}
+
+button.button.btn-compare {
+    display: none;
+}
 /*home end*/
 
 
@@ -203,8 +210,35 @@ li.stock-box {
 #product button.btn-wishlist, #product button.btn-compare{
     display: none;
 }
-<<<<<<< HEAD
+
+.alert.alert-info {
+    display: none;
+}
+
+
+
+input#input-quantity {
+    margin-top: 0 !important;
+    margin: 0;
+}
+.input-group-addon, .input-group-btn {
+    width: auto;
+}
+#product-product .btn-primary {
+
+    background-color: #ff7a5f !important;
+}
+
+#product-product .btn-primary:hover {
+
+    background-color: #ff7a5f00 !important;
+    color:#ff7a5f;
+
+}
 /*product end*/
+
+
+/*default begin*/
 
 .container-contact {
     display: flex;
@@ -213,6 +247,9 @@ li.stock-box {
 .mycontact2{
     margin-top: 60px;
 }
-=======
-/*product end*/
->>>>>>> origin/master
+
+.information-contact form{
+    margin-top: 50px;
+}
+/*default end*/
+
