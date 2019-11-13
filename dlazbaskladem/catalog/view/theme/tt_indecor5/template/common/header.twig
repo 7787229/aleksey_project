@@ -41,6 +41,7 @@
 <link href="catalog/view/theme/tt_indecor5/stylesheet/opentheme/ocslideshow/ocslideshow.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 <link href="catalog/view/theme/tt_indecor5/stylesheet/stylesheet.css" rel="stylesheet" />
+	<link href="catalog/view/theme/tt_indecor5/stylesheet/general.css" rel="stylesheet" />
 {% if use_quick_view %}
 <script src="catalog/view/javascript/cloudzoom/cloud-zoom.1.0.2.min.js" ></script>
 <script src="catalog/view/javascript/cloudzoom/zoom.js" ></script>
@@ -130,12 +131,13 @@
 				{% if block2 %}
 					{{ block2 }}
 				{% endif %}
+
 			</div>
 			
 			<div class="box box-right">
 				{{ search }}
 				
-				<div class="box-setting">
+				<div class="box-setting hidden">
 					<div class="btn-group">	
 						<div class="dropdown-toggle setting-button" data-toggle="dropdown"></div>
 						<div class="dropdown-menu setting-content">
@@ -187,7 +189,9 @@
 			</div>
 		  <div class="clearfix"></div>
 		</div>
-		
+		{% if block3 %}
+			{{ block3 }}
+		{% endif %}
 		</div>
 </header>
 

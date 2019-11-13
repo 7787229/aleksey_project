@@ -145,8 +145,8 @@
                     
 					<h1 class="product-name">{{ heading_title }}</h1>
 					<!-- AddThis Button BEGIN -->
-					<div class="addthis_toolbox addthis_default_style" data-url="{{ share }}"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
-					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
+{#					<div class="addthis_toolbox addthis_default_style" data-url="{{ share }}"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>#}
+{#					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>#}
 					<!-- AddThis Button END --> 
                     
 					{% if review_status %}
@@ -183,13 +183,13 @@
 							
 						{% endif %}
 						{% if manufacturer %}
-                            <li>{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
+                            <li class="brand-box">{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
                         {% endif %}
-                        <li>{{ text_model }} <span>{{ model }}</span></li>
+                        <li >{{ text_model }} <span>{{ model }}</span></li>
                         {% if reward %}
                             <li>{{ text_reward }} <span>{{ reward }}</span></li>
                         {% endif %}
-                        <li>{{ text_stock }} <span>{{ stock }}</span></li>
+                        <li class="stock-box">{{ text_stock }} <span class="{{ isstock==true ? 'available' : 'noavailable' }}">{{ stock }}</span></li>
 						
                     </ul>
 					<p class="short-des">{{ short_description }}</p>
@@ -440,7 +440,7 @@
 				{% if attribute_groups %}
 					<li><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
 				{% endif %}
-				{% if review_status %}
+				{% if false %}
 					<li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
 				{% endif %}
 			</ul>

@@ -203,6 +203,7 @@ li.stock-box {
 #product button.btn-wishlist, #product button.btn-compare{
     display: none;
 }
+<<<<<<< HEAD
 /*product end*/
 
 .container-contact {
@@ -212,3 +213,6 @@ li.stock-box {
 .mycontact2{
     margin-top: 60px;
 }
+=======
+/*product end*/
+>>>>>>> origin/master

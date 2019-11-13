@@ -2211,6 +2211,7 @@ margin-bottom: 7px;
 	bottom: 4px;
 	border: 1px solid #ddd;
 	position: absolute;
+	z-index: -20;
 }
 .ma-corporate-about .box:hover h3 {
 	color: #ff7a5f;
