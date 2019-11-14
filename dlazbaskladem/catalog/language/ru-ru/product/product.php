@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_search']              = 'Поиск';
+$_['text_search']              = 'Zadejte hledaný výraz ';
 $_['text_brand']               = 'Производитель';
 $_['text_manufacturer']        = 'Производитель:';
 $_['text_model']               = 'Модель:';

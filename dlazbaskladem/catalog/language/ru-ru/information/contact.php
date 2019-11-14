@@ -1,8 +1,9 @@
 <?php
 // Heading
-$_['heading_title']  = 'Контакты';
+$_['heading_title']  = 'KONTAKTY';
 
 // Text
+$_['button_submit']='ODESLAT';
 $_['text_location']  = 'Наше местонахождение';
 $_['text_store']     = 'Наши магазины';
 $_['text_contact']   = 'Форма обратной связи';
@@ -14,9 +15,9 @@ $_['text_comment']   = 'Дополнительная информация';
 $_['text_success']   = '<p>Ваше сообщение успешно отправлено владельцу магазина!</p>';
 
 // Entry
-$_['entry_name']     = 'Ваше имя';
-$_['entry_email']    = 'Ваш E-Mail';
-$_['entry_enquiry']  = 'Ваш вопрос или сообщение';
+$_['entry_name']     = 'Jméno';
+$_['entry_email']    = 'E-mail';
+$_['entry_enquiry']  = 'Zpráva';
 
 // Email
 $_['email_subject']  = 'Сообщение от %s';

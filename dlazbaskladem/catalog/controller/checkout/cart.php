@@ -59,8 +59,15 @@ class ControllerCheckoutCart extends Controller {
 
 			foreach ($products as $product) {
 				$product_total = 0;
+                if($product['order_step']==0){
+                    $quantity_box=round($product['quantity']);
+                } else{
+                    $quantity_box=round($product['quantity'] / $product['order_step']);
+                }
 
-				foreach ($products as $product_2) {
+
+
+                    foreach ($products as $product_2) {
 					if ($product_2['product_id'] == $product['product_id']) {
 						$product_total += $product_2['quantity'];
 					}
@@ -142,10 +149,13 @@ class ControllerCheckoutCart extends Controller {
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
-					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
+					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id']),
+                    'quantity_box' => $quantity_box
 				);
-			}
 
+
+			}
+           
 			// Gift Voucher
 			$data['vouchers'] = array();
 

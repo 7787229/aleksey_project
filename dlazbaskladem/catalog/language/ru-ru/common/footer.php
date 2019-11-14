@@ -1,11 +1,11 @@
 <?php
 // Text
-$_['text_information']  = 'Информация';
+$_['text_information']  = 'O SPOLEČNOSTI';
 $_['text_service']      = 'Служба поддержки';
 $_['text_extra']        = 'Дополнительно';
-$_['text_contact']      = 'Контакты';
+$_['text_contact']      = 'KONTAKTY';
 $_['text_return']       = 'Возврат товара';
-$_['text_sitemap']      = 'Карта сайта';
+$_['text_sitemap']      = 'Mapa Stránek';
 $_['text_manufacturer'] = 'Производители';
 $_['text_voucher']      = 'Подарочные сертификаты';
 $_['text_affiliate']    = 'Партнерская программа';

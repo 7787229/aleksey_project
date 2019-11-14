@@ -4,12 +4,12 @@
 	  <div class="box-container">
 		<div class="container-inner">
 		<div class="row">
-			  <div class="col1 col-md-6 col-sm-6 col-xs-12 col-footer">
-			  {% if block4 %}
-				{{ block4 }}
-				{% endif %}
-				
-			</div>
+{#			  <div class="col1 col-md-6 col-sm-6 col-xs-12 col-footer">#}
+{#			  {% if block4 %}#}
+{#				{{ block4 }}#}
+{#				{% endif %}#}
+
+{#			</div>#}
 			 
 			  
 			  <div class="col2 col-md-6 col-sm-6 col-xs-12 col-footer">
@@ -21,12 +21,26 @@
 					  <li><a href="{{ information.href }}">{{ information.title }}</a></li>
 					  {% endfor %}
 					  {% endif %}
-					  <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-					  <li><a href="{{ return }}">{{ text_return }}</a></li>
+{#					  <li><a href="{{ return }}">{{ text_return }}</a></li>#}
 					  <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+						<li><a href="{{ contact }}">{{ text_contact }}</a></li>
 					</ul>
 				</div>
 			  </div>
+
+			<div class="col2 col-md-6 col-sm-6 col-xs-12 col-footer">
+				<div class="footer-title"><h5>Služby</h5></div>
+				<div class="footer-content">
+					<ul class="list-unstyled text-content">
+
+						<li><a href="/index.php?route=information/contact">Velkoobchod</a></li>
+						<li><a href="/index.php?route=information/contact">Developerské oddělení</a></li>
+						<li><a href="/index.php?route=information/contact">Projektová spolupráce</a></li>
+						<li><a href="/index.php?route=information/contact">Stavební projekty na klič</a></li>
+
+					</ul>
+				</div>
+			</div>
 {#			  <div class="col3  col-md-2 col-sm-6 col-xs-12 col-footer">#}
 {#					<div class="footer-title"><h5>{{ text_extra }}</h5></div>#}
 {#					<div class="footer-content">#}
@@ -42,6 +56,11 @@
 {#					</div>#}
 {#						#}
 {#				</div>#}
+
+
+
+
+
 				<div class="col4  col-md-4 col-sm-6 col-xs-12 col-footer">
 					
 					{% if block5 %}

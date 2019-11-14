@@ -12,6 +12,6 @@ $_['text_transaction']   = 'Транзакции';
 $_['text_download']      = 'Загрузки';
 $_['text_logout']        = 'Выход';
 $_['text_checkout']      = 'Оформление заказа';
-$_['text_search']        = 'Поиск';
+$_['text_search']        = 'Zadejte hledaný výraz ';
 $_['text_all']           = 'Смотреть Все';
 

@@ -85,12 +85,17 @@ div#cart {
 
 #logo h1 {
     padding-top: 15px;
+    position: relative;
+    top: 40px;
 }
 /*header end*/
 
 
 
 /*home begin*/
+.text-home {
+    margin-top: 35px;
+}
 .desc-subcat {
     margin-bottom: 15px;
     font-weight: 700;
@@ -191,7 +196,7 @@ ul.footer-contact a {
 
 }
 
-.product-category #compare-total,  .product-category button.button.btn-wishlist, .product-category button.button.btn-compare {
+ #compare-total,  .product-category button.button.btn-wishlist, .product-category button.button.btn-compare {
     display: none;
 }
 
@@ -202,6 +207,24 @@ ul.footer-contact a {
 
 
 /*product begin*/
+span.available:after {
+    width: 24px;
+    height: 24px;
+    content: "";
+    background-image: url(/image/icon/check.svg);
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    top: -2px;
+    right: -25px;
+}
+
+span.available {
+    position: relative;
+}
+.price-box p.special-price .price {
+    font-weight: 600;
+}
 li.stock-box {
     font-weight: 700;
     font-size: 120%;
@@ -242,7 +265,7 @@ input#input-quantity {
 
 .container-contact {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .mycontact2{
     margin-top: 60px;
