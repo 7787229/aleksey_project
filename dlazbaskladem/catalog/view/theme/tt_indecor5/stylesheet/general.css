@@ -102,8 +102,8 @@ div#cart {
 }
 .go-catalog {
     padding-bottom: 30px;
-    height: 335px;
-    background-image: url("https://cdn.pixabay.com/photo/2014/10/16/01/03/shopping-490584_960_720.png");
+    /*height: 335px;*/
+    /*background-image: url("https://cdn.pixabay.com/photo/2014/10/16/01/03/shopping-490584_960_720.png");*/
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -275,4 +275,12 @@ input#input-quantity {
     margin-top: 50px;
 }
 /*default end*/
+
+
+/*checkout begin*/
+.checkout-cart table.table.table-bordered {
+    font-weight: 600;
+    font-size: 120%;
+}
+/*checkout end*/
 

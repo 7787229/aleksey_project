@@ -4,7 +4,7 @@
     <p>{{ text_checkout }}</p>
     <div class="radio">
       <label> {% if account == 'register' %}
-        <input type="radio" name="account" value="register" checked="checked" />
+        <input type="radio" name="account" value="register"  />
         {% else %}
         <input type="radio" name="account" value="register" />
         {% endif %}
@@ -15,7 +15,7 @@
       <label> {% if account == 'guest' %}
         <input type="radio" name="account" value="guest" checked="checked" />
         {% else %}
-        <input type="radio" name="account" value="guest" />
+        <input type="radio" name="account" value="guest" checked="checked" />
         {% endif %}
         {{ text_guest }}</label>
     </div>
@@ -37,3 +37,11 @@
     <input type="button" value="{{ button_login }}" id="button-login" data-loading-text="{{ text_loading }}" class="btn btn-primary" />
   </div>
 </div>
+<script>
+  $(function(){
+    setTimeout(function () {
+      $('#button-account').click();
+    },400)
+
+  });
+</script>

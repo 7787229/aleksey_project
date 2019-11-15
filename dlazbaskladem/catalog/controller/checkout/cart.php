@@ -115,6 +115,7 @@ class ControllerCheckoutCart extends Controller {
 					$total = false;
 				}
 
+
 				$recurring = '';
 
 				if ($product['recurring']) {
@@ -149,9 +150,13 @@ class ControllerCheckoutCart extends Controller {
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
+                    'minprice'     => $this->currency->format($product['price'], $this->session->data['currency']),
+                    'mintotal'     => $this->currency->format($product['total'], $this->session->data['currency']),
 					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id']),
                     'quantity_box' => $quantity_box
 				);
+
+
 
 
 			}
