@@ -166,9 +166,7 @@
 					<ul class="list-unstyled">
                         {% if price %}
 							
-							{% if tax %}
-							<li>{{ text_tax }} <span class="ex-text">{{ tax }}</span></li>
-							{% endif %}
+
 							{% if points %}
 							<li>{{ text_points }} <span>{{ points }}</span></li>
 							{% endif %}
@@ -193,15 +191,20 @@
 						
                     </ul>
 					<p class="short-des">{{ short_description }}</p>
+                    {% if tax %}
+                        <div class="ex-label">Cena bez DPH <span class="ex-text price">{{ tax }}</span></div>
+                    {% endif %}
                     {% if price %}
 						{% if not special %}
 						<div class="price-box box-regular">
+                            <span class="price-label">Cena s DPH</span>
 							<span class="regular-price">
 								<span class="price">{{ price }}</span>
 							</span>
 						</div>
 						{% else %}
 						<div class="price-box box-special">
+                            <span class="price-label">Cena s DPH</span>
 							<p class="special-price"><span class="price">{{ special }}</span></p>
 							<p class="old-price"><span class="price">{{ price }}</span></p>
 						</div>
@@ -411,7 +414,7 @@
                             </div>
                         {% endif %}
                         <div class="form-group">
-                            <label class="control-label" for="input-quantity">{{ entry_qty }}</label>
+{#                            <label class="control-label" for="input-quantity">{{ entry_qty }}</label>#}
                             <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
                             <input type="hidden" name="product_id" value="{{ product_id }}" />
                        
@@ -435,19 +438,19 @@
 			</div>
             </div>
 			<div class="product-info-detailed">
-				<ul class="nav nav-tabs">
-				<li class="active"><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
+				<ul class="nav nav-tabs hidden">
+				<li ><a href="#tab-description" data-toggle="tab">{{ tab_description }}</a></li>
 				{% if attribute_groups %}
-					<li><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
+					<li class="active"><a href="#tab-specification" data-toggle="tab">{{ tab_attribute }}</a></li>
 				{% endif %}
 				{% if false %}
 					<li><a href="#tab-review" data-toggle="tab">{{ tab_review }}</a></li>
 				{% endif %}
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab-description">{{ description }}</div>
+				<div class="tab-pane " id="tab-description">{{ description }}</div>
 				{% if attribute_groups %}
-					<div class="tab-pane" id="tab-specification">
+					<div class="tab-pane active" id="tab-specification">
 						<table class="table table-bordered">
 							{% for attribute_group in attribute_groups %}
 								<thead>
@@ -458,7 +461,7 @@
 								<tbody>
 								{% for attribute in attribute_group.attribute %}
 									<tr>
-										<td>{{ attribute.name }}</td>
+										<th>{{ attribute.name }}</th>
 										<td>{{ attribute.text }}</td>
 									</tr>
 								{% endfor %}

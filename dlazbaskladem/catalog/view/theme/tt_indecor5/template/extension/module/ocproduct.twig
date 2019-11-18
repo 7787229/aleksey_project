@@ -225,7 +225,8 @@
 										</div>
 									</div>					
 									
-									<h4 class="product-name"><a href="{{ product.href }}">{{ product.name }}</a></h4> 
+									<h4 class="product-name"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+									<div class="stock-box">{{ text_stock }} <span class="available">{{ product.stock }}</span></div>
 									{% if config_module.description %}
 									<div class="product-des">{{ product.description }}</div>
 									{% endif %}
