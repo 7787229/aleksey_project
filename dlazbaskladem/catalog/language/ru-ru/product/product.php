@@ -3,11 +3,11 @@
 $_['text_search']              = 'Zadejte hledaný výraz ';
 $_['text_brand']               = 'Производитель';
 $_['text_manufacturer']        = 'Производитель:';
-$_['text_model']               = 'Модель:';
+$_['text_model']               = 'Kód:';
 $_['text_reward']              = 'Бонусные баллы:';
 $_['text_points']              = 'Цена в бонусных баллах:';
-$_['text_stock']               = 'Наличие:';
-$_['text_instock']             = 'Есть в наличии';
+$_['text_stock']               = ' ';
+$_['text_instock']             = 'Skladem';
 $_['text_tax']                 = 'Без НДС:';
 $_['text_discount']            = ' или более: ';
 $_['text_option']              = 'Доступные варианты';
@@ -18,7 +18,7 @@ $_['text_login']               = 'Пожалуйста <a href="%s">автори
 $_['text_no_reviews']          = 'Нет отзывов о данном товаре.';
 $_['text_note']                = '<span style="color: #FF0000;">Примечание:</span> HTML разметка не поддерживается! Используйте обычный текст.';
 $_['text_success']             = 'Спасибо за ваш отзыв. Он поступил администратору для проверки на спам и вскоре будет опубликован.';
-$_['text_related']             = 'Рекомендуемые товары';
+$_['text_related']             = 'DOPORUČENÉ ZBOŽÍ';
 $_['text_tags']                = '<i class="fa fa-tags"></i>';
 $_['text_error']               = 'Товар не найден!';
 $_['text_payment_recurring']   = 'Платежный профиль';

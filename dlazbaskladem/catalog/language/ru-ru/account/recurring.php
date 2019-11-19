@@ -39,7 +39,7 @@ $_['text_cancelled']                       = 'Периодический пла�
 // Column
 $_['column_date_added']                    = 'Создан';
 $_['column_type']                          = 'Тип';
-$_['column_amount']                        = 'Итого';
+$_['column_amount']                        = 'Celkem s DPH';
 $_['column_status']                        = 'Статус';
 $_['column_product']                       = 'Товар';
 $_['column_order_recurring_id']            = 'ID Профиля';

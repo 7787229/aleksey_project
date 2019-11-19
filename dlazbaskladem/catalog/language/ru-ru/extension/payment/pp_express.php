@@ -1,10 +1,10 @@
 <?php
 // Heading
-$_['express_text_title']      = 'Подтверждение заказа';
+$_['express_text_title']      = 'POTVRDÍT OBJEDNÁVKU';
 
 // Text
 $_['text_title']              = 'PayPal Экспресс-платежи (в.т.ч. карты Visa и MasterCard)';
-$_['text_cart']               = 'Корзина покупок';
+$_['text_cart']               = 'Košík';
 $_['text_shipping_updated']   = 'Доставка обновлена';
 $_['text_trial']              = 'Сумма: %s; Периодичность: %s %s; Кол-во платежей: %s, Далее ';
 $_['text_recurring']          = 'Сумма: %s Периодичность: %s %s';

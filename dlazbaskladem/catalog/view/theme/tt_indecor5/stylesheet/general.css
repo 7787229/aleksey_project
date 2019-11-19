@@ -6,7 +6,9 @@ p.text-center.cart-empty {
 #logo{padding: 0}
 header .container-inner {
     margin-top: -15px;
+
 }
+
 .top-contacts {
     display: flex;
     justify-content: center;
@@ -14,7 +16,9 @@ header .container-inner {
     font-size: 16px;
     flex-wrap: wrap;
 }
-
+#accordion > .panel-default:nth-child(3){
+    display: none;
+}
 .top-mail, .top-tel {
     padding-left: 20px;
     padding-right: 20px;

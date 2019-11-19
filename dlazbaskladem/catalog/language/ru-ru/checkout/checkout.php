@@ -1,16 +1,16 @@
 <?php
 // Heading
-$_['heading_title']                  = 'Оформление заказа';
+$_['heading_title']                  = 'Pokračovat';
 
 // Text
-$_['text_cart']                      = 'Корзина покупок';
-$_['text_checkout_option']           = 'Шаг %s: Способ оформления заказа';
+$_['text_cart']                      = 'Košík';
+$_['text_checkout_option']           = 'Košík %s: Dokončit Objednávku';
 $_['text_checkout_account']          = 'Шаг %s: Профиль &amp; Платежная информация';
-$_['text_checkout_payment_address']  = 'Шаг 1: Платежная информация';
-$_['text_checkout_shipping_address'] = 'Шаг 2: Адрес доставки';
-$_['text_checkout_shipping_method']  = 'Шаг 3: Способ доставки';
-$_['text_checkout_payment_method']   = 'Шаг 4: Способ оплаты';
-$_['text_checkout_confirm']          = 'Шаг 5: Подтверждение заказа';
+$_['text_checkout_payment_address']  = 'Fakturační údaje';
+$_['text_checkout_shipping_address'] = 'Fakturační údaje';
+$_['text_checkout_shipping_method']  = 'Výdej zboží';
+$_['text_checkout_payment_method']   = 'Způsob platby';
+$_['text_checkout_confirm']          = 'Potvrzení Objednávky';
 $_['text_modify']                    = 'Изменить &raquo;';
 $_['text_new_customer']              = 'Новый покупатель';
 $_['text_returning_customer']        = 'Зарегистрированный пользователь';
@@ -20,10 +20,10 @@ $_['text_register']                  = 'Регистрация';
 $_['text_guest']                     = 'Оформить заказ без регистрации';
 $_['text_register_account']          = 'Создание учётной записи поможет делать покупки быстрее и удобнее, а так же получать скидки как постоянный покупатель.';
 $_['text_forgotten']                 = 'Забыли пароль?';
-$_['text_your_details']              = 'Личные данные';
+$_['text_your_details']              = 'Fakturační údaje';
 $_['text_your_address']              = 'Адрес';
 $_['text_your_password']             = 'Пароль';
-$_['text_agree']                     = 'Я прочитал <a href="%s" class="agree"><b>%s</b></a> и согласен с условиями';
+$_['text_agree']                     = 'Přečetl(a) jsem si <a href="%s" class="agree"><b>%s</b></a> a souhlasím s nimi';
 $_['text_address_new']               = 'Я хочу использовать новый адрес';
 $_['text_address_existing']          = 'Я хочу использовать существующий адрес';
 $_['text_shipping_method']           = 'Выберите удобный способ доставки для данного заказа';
@@ -41,26 +41,26 @@ $_['text_month']                     = 'месяц';
 $_['text_year']                      = 'год';
 
 // Column
-$_['column_name']                    = 'Название товара';
-$_['column_model']                   = 'Модель';
-$_['column_quantity']                = 'Количество';
-$_['column_price']                   = 'Цена';
-$_['column_total']                   = 'Итого';
+$_['column_name']                    = 'Název';
+$_['column_model']                   = 'Kód';
+$_['column_quantity']                = 'Množství';
+$_['column_price']                   = 'Cena';
+$_['column_total']                   = 'Celkem s DPH';
 
 // Entry
 $_['entry_email_address']            = 'E-Mail Адрес';
 $_['entry_email']                    = 'E-Mail';
 $_['entry_password']                 = 'Пароль';
 $_['entry_confirm']                  = 'Подтверждение пароля';
-$_['entry_firstname']                = 'Имя';
-$_['entry_lastname']                 = 'Фамилия';
-$_['entry_telephone']                = 'Телефон';
+$_['entry_firstname']                = 'Jméno a přijmení (název firmy)';
+$_['entry_lastname']                 = 'Ulice a číslo popisné';
+$_['entry_telephone']                = 'Telefon';
 $_['entry_address']                  = 'Выберите адрес';
-$_['entry_company']                  = 'Компания';
-$_['entry_customer_group']           = 'Тип бизнеса';
-$_['entry_address_1']                = 'Адрес';
-$_['entry_address_2']                = 'Адрес 2';
-$_['entry_postcode']                 = 'Индекс';
+$_['entry_company']                  = 'IČO';
+$_['entry_customer_group']           = ' ';
+$_['entry_address_1']                = 'Město';
+$_['entry_address_2']                = 'DIČ';
+$_['entry_postcode']                 = 'PSČ';
 $_['entry_city']                     = 'Город';
 $_['entry_country']                  = 'Страна';
 $_['entry_zone']                     = 'Регион / Область';

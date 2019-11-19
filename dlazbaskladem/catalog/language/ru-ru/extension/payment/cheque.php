@@ -1,8 +1,8 @@
 <?php
 // Text
-$_['text_title']       = 'Оплата наличными';
-$_['text_instruction'] = 'Оплата наличными. Инструкция';
-$_['text_payable']     = 'Получатель платежа: ';
-$_['text_address']     = 'Прием платежей по адресу: ';
-$_['text_payment']     = 'Ваш заказ не будет обработан, пока мы не получим оплату.';
+$_['text_title']       = 'Platba hotově při osobním odběru';
+$_['text_instruction'] = ' ';
+$_['text_payable']     = ' ';
+$_['text_address']     = '  ';
+$_['text_payment']     = 'Наш счет фактуры: допустим 2132131241244 ';
 
