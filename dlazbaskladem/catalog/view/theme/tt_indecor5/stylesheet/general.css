@@ -19,6 +19,12 @@ header .container-inner {
 #accordion > .panel-default:nth-child(3){
     display: none;
 }
+#collapse-checkout-confirm .well{
+    display: none;
+}
+
+
+
 .top-mail, .top-tel {
     padding-left: 20px;
     padding-right: 20px;
