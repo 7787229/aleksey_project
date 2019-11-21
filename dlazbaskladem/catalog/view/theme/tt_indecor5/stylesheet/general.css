@@ -1,4 +1,5 @@
 /*header begin*/
+
 p.text-center.cart-empty {
     font-size: 16px;
     font-weight: 600;
@@ -101,6 +102,10 @@ div#cart {
 
 
 /*home begin*/
+
+iframe.gmaps.item2 {
+    display: none;
+}
 .deal-producst .item-inner .caption .available {
     display: inline;
 
@@ -218,6 +223,10 @@ ul.footer-contact a {
 
 
 /*category begin*/
+select#input-sort option:nth-child(6), select#input-sort option:nth-child(7) , select#input-sort option:nth-child(8)
+, select#input-sort option:nth-child(9) {
+    display:none;
+}
 @media (min-width: 1200px) {
     .product-category .breadcrumbs.hasimage .container {
         width: 100%;
@@ -279,7 +288,7 @@ div#tab-specification thead {
     font-size: 13px;
     border: none;
 }
-.price:after {
+#product-product .price:after {
     content:" / m2";
 }
 #product-product .input-group.number-spinner-XVR:after {
@@ -369,6 +378,10 @@ input#input-quantity {
 
 
 /*default begin*/
+.ma-corporate-about {
+
+    margin-top: 50px;
+}
 div#information-information {
     font-size: 16px;
 }

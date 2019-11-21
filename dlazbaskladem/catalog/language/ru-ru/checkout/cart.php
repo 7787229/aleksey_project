@@ -3,7 +3,7 @@
 $_['heading_title']            = 'Košík';
 
 // Text
-$_['text_success']             = '<a href="%s">%s</a> добавлен <a href="%s">в корзину покупок</a>!';
+$_['text_success']             = 'Zboží bylo přidáno do košíku.';
 $_['text_remove']              = 'Košík';
 $_['text_login']               = 'Необходимо <a href="%s">авторизироваться</a> или <a href="%s">создать учетную запись</a> для просмотра цен!';
 $_['text_items']               = '%s  (%s)';
@@ -36,7 +36,7 @@ $_['column_total']             = 'Celkem s DPH';
 
 // Error
 $_['error_stock']              = 'Товары отмеченные *** отсутствуют в нужном количестве или их нет на складе!';
-$_['error_minimum']            = 'Минимальное количество для заказа товара %s составляет %s!';
+$_['error_minimum']            = 'Minimalni mnozstvi pro objednani je:  <span class="hidden">%s</span> %s!';
 $_['error_required']           = '%s обязательно!';
 $_['error_product']            = 'В вашей корзине нет товаров!';
 $_['error_recurring_required'] = 'Пожалуйста, выберите периодичность платежа!';

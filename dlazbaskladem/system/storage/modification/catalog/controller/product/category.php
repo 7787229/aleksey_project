@@ -208,31 +208,31 @@ class ControllerProductCategory extends Controller {
                     'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.price&order=DESC' . $url
                 );
 
-                if ($this->config->get('config_review_status')) {
-                    $data['ajax_sorts'][] = array(
-                        'text'  => $this->language->get('text_rating_desc'),
-                        'value' => 'rating-DESC',
-                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=DESC' . $url
-                    );
-
-                    $data['ajax_sorts'][] = array(
-                        'text'  => $this->language->get('text_rating_asc'),
-                        'value' => 'rating-ASC',
-                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=ASC' . $url
-                    );
-                }
-
-                $data['ajax_sorts'][] = array(
-                    'text'  => $this->language->get('text_model_asc'),
-                    'value' => 'p.model-ASC',
-                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=ASC' . $url
-                );
-
-                $data['ajax_sorts'][] = array(
-                    'text'  => $this->language->get('text_model_desc'),
-                    'value' => 'p.model-DESC',
-                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=DESC' . $url
-                );
+//                if ($this->config->get('config_review_status')) {
+//                    $data['ajax_sorts'][] = array(
+//                        'text'  => $this->language->get('text_rating_desc'),
+//                        'value' => 'rating-DESC',
+//                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=DESC' . $url
+//                    );
+//
+//                    $data['ajax_sorts'][] = array(
+//                        'text'  => $this->language->get('text_rating_asc'),
+//                        'value' => 'rating-ASC',
+//                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=ASC' . $url
+//                    );
+//                }
+//
+//                $data['ajax_sorts'][] = array(
+//                    'text'  => $this->language->get('text_model_asc'),
+//                    'value' => 'p.model-ASC',
+//                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=ASC' . $url
+//                );
+//
+//                $data['ajax_sorts'][] = array(
+//                    'text'  => $this->language->get('text_model_desc'),
+//                    'value' => 'p.model-DESC',
+//                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=DESC' . $url
+//                );
 
                 $data['ajax_limits'] = array();
 

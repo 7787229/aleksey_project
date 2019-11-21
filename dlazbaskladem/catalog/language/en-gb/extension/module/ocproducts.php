@@ -21,5 +21,5 @@ $_['text_sec']    = 'secs';
 
 $_['price_label']    = 'Price:';
 $_['text_stock']    = 'Available:';
-$_['text_instock']    = 'In Stock';
+$_['text_instock']    = 'Skladem';
 

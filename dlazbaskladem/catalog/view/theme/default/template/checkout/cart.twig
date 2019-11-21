@@ -29,10 +29,7 @@
     {% set class = 'col-sm-12' %}
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}
-      <h1>{{ heading_title }}
-        {% if weight %}
-        &nbsp;({{ weight }})
-        {% endif %} </h1>
+      <h1>{{ heading_title }}</h1>
       <form action="{{ action }}" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
           <table class="table table-bordered">
@@ -42,9 +39,9 @@
                 <td class="text-left">{{ column_name }}</td>
                 <td class="text-left">{{ column_model }}</td>
                 <td class="text-left">{{ column_quantity }}</td>
-                <td class="text-left">Количество коробок</td>
+                <td class="text-left">Celkem kartonu</td>
                 <td class="text-right">{{ column_price }}</td>
-                <td class="text-right">Всего без НДС</td>
+                <td class="text-right">Сelkem bez DPH</td>
                 <td class="text-right">{{ column_total }}</td>
               </tr>
             </thead>
@@ -121,4 +118,25 @@
       {{ content_bottom }}</div>
     {{ column_right }}</div>
 </div>
-{{ footer }} 
+{{ footer }}
+<script>
+  function search (id){
+
+    var a = document.getElementById(id);
+    return a;
+
+
+  }
+
+  var btn = document.querySelector('button[data-dir="dwn"]');
+
+  btn.addEventListener('click',function(){
+    setTimeout(function(){
+      //console.log('dffdfdgdgdg');
+      if(search('ModalAlert_1_body') == 'ModalAlert_1_body'){
+        console.log(search('ModalAlert_1_body'));
+      }
+    },5000)
+
+  })
+</script>

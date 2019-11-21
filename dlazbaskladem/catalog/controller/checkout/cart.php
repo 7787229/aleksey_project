@@ -228,7 +228,7 @@ class ControllerCheckoutCart extends Controller {
 				);
 			}
 
-			$data['continue'] = $this->url->link('common/home');
+			$data['continue'] = '/index.php?route=product/category&path=74';
 
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 
