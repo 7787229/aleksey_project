@@ -8,7 +8,7 @@ $_['text_reward']              = 'Бонусные баллы:';
 $_['text_points']              = 'Цена в бонусных баллах:';
 $_['text_stock']               = ' ';
 $_['text_instock']             = 'Skladem';
-$_['text_tax']                 = 'Без НДС:';
+$_['text_tax']                 = 'Сelkem bez DPH:';
 $_['text_discount']            = ' или более: ';
 $_['text_option']              = 'Доступные варианты';
 $_['text_minimum']             = 'Minimalni mnozstvi pro objednani je ....: %s';
@@ -32,7 +32,7 @@ $_['text_month']               = 'месяц';
 $_['text_year']                = 'год';
 
 // Entry
-$_['entry_qty']                = 'Количество';
+$_['entry_qty']                = 'Množství';
 $_['entry_name']               = 'Ваше имя:';
 $_['entry_review']             = 'Ваш отзыв:';
 $_['entry_rating']             = 'Оценка:';

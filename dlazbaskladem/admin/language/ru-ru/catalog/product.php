@@ -22,7 +22,7 @@ $_['column_name']            = 'Название товара';
 $_['column_model']           = 'Модель';
 $_['column_image']           = 'Изображения';
 $_['column_price']           = 'Цена на сайте';
-$_['column_quantity']        = 'Количество';
+$_['column_quantity']        = 'Množství';
 $_['column_status']          = 'Статус';
 $_['column_action']          = 'Действие';
 
@@ -45,7 +45,7 @@ $_['entry_location']         = 'Расположение';
 $_['entry_shipping']         = 'Необходима доставка';
 $_['entry_manufacturer']     = 'Производитель';
 $_['entry_date_available']   = 'Дата поступления';
-$_['entry_quantity']         = 'Количество';
+$_['entry_quantity']         = 'Množství';
 $_['entry_minimum']          = 'Минимальное количество';
 $_['entry_stock_status']     = 'Отсутствие на складе';
 $_['entry_price']            = 'Цена';

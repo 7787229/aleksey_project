@@ -11,7 +11,7 @@ $_['text_ip_list']       = 'Список заблокированных IP';
 
 // Column
 $_['column_ip']          = 'IP';
-$_['column_total']       = 'Количество';
+$_['column_total']       = 'Množství';
 $_['column_date_added']  = 'Дата';
 $_['column_action']      = 'Действие';
 

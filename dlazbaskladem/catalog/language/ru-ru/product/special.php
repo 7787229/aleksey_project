@@ -4,12 +4,12 @@ $_['heading_title']     = 'AKCE';
 
 // Text
 $_['text_empty']        = 'Нет товаров по акции.';
-$_['text_quantity']     = 'Количество:';
+$_['text_quantity']     = 'Množství:';
 $_['text_manufacturer'] = 'Производитель:';
 $_['text_model']        = 'Kód:';
 $_['text_points']       = 'Бонусные баллы:';
 $_['text_price']        = 'Цена:';
-$_['text_tax']          = 'Без НДС:';
+$_['text_tax']          = 'Сelkem bez DPH:';
 $_['text_compare']      = 'Сравнение товаров (%s)';
 $_['text_sort']         = 'Řadit podle:';
 $_['text_default']      = 'DOPORUČUJEME';
