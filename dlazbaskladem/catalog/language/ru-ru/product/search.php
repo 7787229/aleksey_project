@@ -1,13 +1,13 @@
 <?php
 // Heading
-$_['heading_title']     = 'Поиск';
+$_['heading_title']     = 'Hledat';
 $_['heading_tag']       = 'По тегу - ';
 
 // Text
 $_['text_search']       = 'Результаты поиска';
 $_['text_keyword']      = 'Ключевые слова';
 $_['text_category']     = 'Все категории';
-$_['text_sub_category'] = 'Поиск в подкатегориях';
+$_['text_sub_category'] = 'Hledat v podkategoriích';
 $_['text_empty']        = 'Нет товаров, которые соответствуют критериям поиска.';
 $_['text_quantity']     = 'Množství:';
 $_['text_manufacturer'] = 'Производитель:';
@@ -30,6 +30,6 @@ $_['text_model_desc']   = 'Модель (Я - А)';
 $_['text_limit']        = 'Zobrazit:';
 
 // Entry
-$_['entry_search']      = 'Поиск:';
-$_['entry_description'] = 'Искать в описании товаров';
+$_['entry_search']      = 'Hledat:';
+$_['entry_description'] = 'Hledat v popisu produktu';
 

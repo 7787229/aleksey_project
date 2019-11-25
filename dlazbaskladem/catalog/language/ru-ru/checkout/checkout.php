@@ -5,7 +5,7 @@ $_['heading_title']                  = 'Pokračovat';
 // Text
 $_['text_cart']                      = 'Košík';
 $_['text_checkout_option']           = 'Košík %s: Dokončit Objednávku';
-$_['text_checkout_account']          = 'Шаг %s: Профиль &amp; Платежная информация';
+$_['text_checkout_account']          = 'Fakturační údaje';
 $_['text_checkout_payment_address']  = 'Fakturační údaje';
 $_['text_checkout_shipping_address'] = 'Fakturační údaje';
 $_['text_checkout_shipping_method']  = 'Výdej zboží';
@@ -68,26 +68,26 @@ $_['entry_newsletter']               = 'Я хочу подписаться на 
 $_['entry_shipping']                 = 'Мой адрес доставки совпадает с платежным.';
 
 // Error
-$_['error_warning']                  = 'Возникла проблема при обработке Вашего заказа! Если проблема возникает повторно, попробуйте выбрать другой способ оплаты или <a href="%s">свяжитесь с администратором магазина</a>.';
-$_['error_login']                    = 'Ошибка: Неправильный E-Mail и/или пароль.';
-$_['error_attempts']                 = 'Вы превысили максимальное количество попыток авторизации. Повторите попытку авторизации на сайте через 1 час';
+$_['error_warning']                  = 'Omlouváme se, při zpracování Vaší objednávky došlo k chybě.  Chvíli počkejte a zkuste to znovu. Pokud problém přetrvává, kontaktujte nás telefonicky nebo e-mailem.';
+$_['error_login']                    = 'Chybně zadané heslo nebo e-mail.';
+$_['error_attempts']                 = 'Překročili jste maximální počet pokusů o přihlášení. Zkuste opakovat přes hodinu.';
 $_['error_approved']                 = 'Прежде чем Вы сможете войти, администрация должна одобрить Ваш аккаунт.';
 $_['error_exists']                   = 'Ошибка: данный E-Mail адрес уже зарегистрирован!';
-$_['error_firstname']                = 'Имя должно быть от 1 до 32 символов!';
-$_['error_lastname']                 = 'Фамилия должна быть от 1 до 32 символов!';
-$_['error_email']                    = 'Е-mail адрес введён неверно!';
-$_['error_telephone']                = 'Номер телефона должен быть от 3 до 32 символов!';
+$_['error_firstname']                = 'Jméno musí obsahovat 1-32 znaků!';
+$_['error_lastname']                 = 'Ulice musí obsahovat 1-32 znaků!А';
+$_['error_email']                    = 'Špatně uvedený email!';
+$_['error_telephone']                = 'Telefonní čísla musí obsahovat 3-32 znaků!';
 $_['error_password']                 = 'Пароль должен быть от 4 до 20 символов!';
 $_['error_confirm']                  = 'Пароли не совпадают!';
-$_['error_address_1']                = 'Адрес должен быть от 3 до 128 символов!';
-$_['error_city']                     = 'Название города должно быть от 2 до 128 символов!';
-$_['error_postcode']                 = 'Индекс должен быть от 2 до 10 символов!';
+$_['error_address_1']                = 'Adresa musí obsahovat 3-128 znaků';
+$_['error_city']                     = 'Název města musí obsahovat 2-128 znaků';
+$_['error_postcode']                 = 'PSČ musí obsahovat 2-10 znaků!';
 $_['error_country']                  = 'Пожалуйста, выберите страну!';
 $_['error_zone']                     = 'Пожалуйста, выберите регион / область';
 $_['error_agree']                    = 'Вы должны прочитать и согласится с %s!';
-$_['error_address']                  = 'Необходимо указать адрес!';
-$_['error_shipping']                 = 'Необходимо указать способ доставки!';
-$_['error_no_shipping']              = 'Нет доступных способов доставки. Пожалуйста <a href="%s">свяжитесь с администрацией</a>!';
+$_['error_address']                  = 'Musíte uvést adresu';
+$_['error_shipping']                 = 'Uveďte způsob dodání!';
+$_['error_no_shipping']              = 'Způsob doručení není dostupný. Kontaktujte nás  telefonicky nebo e-mailem. Přečtěte si a souhlaste s těmito podmínkami.';
 $_['error_payment']                  = 'Необходимо указать способ оплаты!';
 $_['error_no_payment']               = 'Нет доступных способов оплаты. Пожалуйста <a href="%s">свяжитесь с администрацией</a>!';
 $_['error_custom_field']             = '%s обязательно!';

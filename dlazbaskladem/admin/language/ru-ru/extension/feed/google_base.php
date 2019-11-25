@@ -15,7 +15,7 @@ $_['column_action']          = 'Действие';
 
 // Entry
 $_['entry_google_category']  = 'Google Категория';
-$_['entry_category']         = 'Категории';
+$_['entry_category']         = 'Kategorie';
 $_['entry_data_feed']        = 'URL канала';
 $_['entry_status']           = 'Статус';
 
