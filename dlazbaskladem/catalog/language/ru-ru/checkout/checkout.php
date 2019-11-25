@@ -27,7 +27,7 @@ $_['text_agree']                     = 'Přečetl(a) jsem si <a href="%s" class=
 $_['text_address_new']               = 'Я хочу использовать новый адрес';
 $_['text_address_existing']          = 'Я хочу использовать существующий адрес';
 $_['text_shipping_method']           = 'Выберите удобный способ доставки для данного заказа';
-$_['text_payment_method']            = 'Выберите способ оплаты для данного заказа';
+$_['text_payment_method']            = 'Zvolte způsob platby:';
 $_['text_comments']                  = 'Вы можете добавить комментарий к своему заказу';
 $_['text_recurring_item']            = 'Элемент периодичности';
 $_['text_payment_recurring']         = 'Платежный профиль';

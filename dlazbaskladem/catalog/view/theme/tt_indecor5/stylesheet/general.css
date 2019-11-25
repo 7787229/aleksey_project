@@ -259,6 +259,12 @@ select#input-sort option:nth-child(6), select#input-sort option:nth-child(7) , s
 
 
 /*product begin*/
+.label-product.label_sale {
+    font-size: 16px;
+    color: red;
+    font-weight: 500;
+    background: none;
+}
 div#tab-specification table {
     border: none;
 }

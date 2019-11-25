@@ -17,7 +17,7 @@ $_['text_none']             = ' --- Не выбрано --- ';
 $_['text_select']           = ' --- Выберите --- ';
 $_['text_all_zones']        = 'Все зоны';
 $_['text_pagination']       = 'Zobrazeno %d - %d z %d produktů';
-$_['text_loading']          = 'Загрузка...';
+$_['text_loading']          = 'NAČÍTÁNÍ...';
 $_['text_no_results']       = 'Нет данных!';
 
 // Buttons
