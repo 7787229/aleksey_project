@@ -319,7 +319,8 @@ var cart = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart > button').html('<span id="cart-total">' + json['total'] + '</span>');
+					//$('#cart > button').html('<span id="cart-total">' + json['total'] + '</span>');
+					$('#cart > button').html('<span id="cart-total"><span class="txt_number">'+json['count']+'</span><span class="txt_items">Cart</span><span class="total-price">'+json['price']+'</span></span>');
 				}, 100);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {

@@ -1,2 +1,2 @@
 <?php
-$_['text_close'] = "Close";
+$_['text_close'] = "X";

@@ -30,7 +30,7 @@ $_['text_mail_order']                = 'Новый заказ';
 $_['text_mail_review']               = 'Отзыв о товаре';
 $_['text_general']                   = 'Основное';
 $_['text_security']                  = 'Защита';
-$_['text_upload']                    = 'Загрузка';
+$_['text_upload']                    = 'NAČÍTÁNÍ';
 $_['text_error']                     = 'Ошибки';
 
 // Entry

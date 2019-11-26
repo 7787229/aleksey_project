@@ -140,7 +140,7 @@ var xvrMinus = function (oldValueXVR, newValueXVR, stepValueXVR, minValueXVR, ma
 			newValueXVR = newValueXVR - stepValueXVR;
 			return newValueXVR;
 		} else {
-			xvrModalAlert("Minimalni mnozstvi pro objednani je: "+ minValueXVR/1000);
+			xvrModalAlert("Minimalni mnozstvi pro objednani je: "+ minValueXVR/1000+'<br>Po přidání požadovaného množství (m2) kliknete na tlačítko aktualizovat.');
 			if (oldValueXVR == 0 && quantityInStock < minValueXVR) {return oldValueXVR;} else {return minValueXVR;}
 		}
 	} else {

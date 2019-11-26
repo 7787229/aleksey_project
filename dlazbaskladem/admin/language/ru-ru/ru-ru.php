@@ -22,7 +22,7 @@ $_['text_all_zones']                = 'Все регионы';
 $_['text_default']                  = ' <b>(По умолчанию)</b>';
 $_['text_close']                    = 'Закрыть';
 $_['text_pagination']               = 'Показано с %d по %d из %d (страниц: %d)';
-$_['text_loading']                  = 'Загрузка...';
+$_['text_loading']                  = 'NAČÍTÁNÍ...';
 $_['text_no_results']               = 'Нет данных!';
 $_['text_confirm']                  = 'Данное действие необратимо. Вы уверены?';
 $_['text_home']                     = '<i class="fa fa-home fa-lg"></i>';

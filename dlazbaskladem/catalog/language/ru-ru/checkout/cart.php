@@ -37,7 +37,7 @@ $_['column_total']             = 'Celkem s DPH';
 
 // Error
 $_['error_stock']              = 'Товары отмеченные *** отсутствуют в нужном количестве или их нет на складе!';
-$_['error_minimum']            = 'Minimalni mnozstvi pro objednani je:  <span class="hidden">%s</span> %s!';
+$_['error_minimum']            = 'Minimalni mnozstvi pro objednani je:  <span class="hidden">%s</span> %s! <br> Po přidání požadovaného množství (m2) kliknete na tlačítko aktualizovat.';
 $_['error_required']           = '%s обязательно!';
 $_['error_product']            = 'В вашей корзине нет товаров!';
 $_['error_recurring_required'] = 'Пожалуйста, выберите периодичность платежа!';

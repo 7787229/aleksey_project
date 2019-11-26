@@ -108,7 +108,12 @@ div#cart {
 
 
 /*home begin*/
+.occountdown_module {
 
+    background: url(/image/catalog/bgslides/akc.jpg) center;
+
+    background-size: contain;
+}
 iframe.gmaps.item2 {
     display: none;
 }
@@ -229,6 +234,9 @@ ul.footer-contact a {
 
 
 /*category begin*/
+.product-category header {
+    margin-bottom: 0;
+}
 select#input-sort option:nth-child(6), select#input-sort option:nth-child(7) , select#input-sort option:nth-child(8)
 , select#input-sort option:nth-child(9) {
     display:none;
@@ -259,6 +267,11 @@ select#input-sort option:nth-child(6), select#input-sort option:nth-child(7) , s
 
 
 /*product begin*/
+.price-box.box-special {
+    flex-wrap: wrap;
+
+}
+
 .label-product.label_sale {
     font-size: 16px;
     color: red;
@@ -386,10 +399,16 @@ input#input-quantity {
     color:#ff7a5f;
 
 }
+.quickview-container a#product-cloud-zoom {
+    max-width: 100%;
+}
 /*product end*/
 
 
 /*default begin*/
+.container-contact {
+    flex-wrap: wrap;
+}
 .ma-corporate-about {
 
     margin-top: 50px;
@@ -412,6 +431,9 @@ div#information-information {
 .information-contact form{
     margin-top: 50px;
 }
+#product-search .modes {
+    display: none;
+}
 /*default end*/
 
 
@@ -422,3 +444,71 @@ div#information-information {
 }
 /*checkout end*/
 
+
+
+/*media begin*/
+@media (max-width: 1305px) {
+    .oc-menu.horizontal-menu{
+        padding-left: 0px;
+
+    }
+
+    .top-contacts {
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 960px) {
+        .logo-container {
+
+            max-width: 100%;
+        }
+
+        #logo h1 {
+
+            padding-top: 7px;
+            text-align: left;
+            top: -10px;
+        }
+
+        .top-contacts {
+            justify-content: center;
+        }
+}
+
+@media (max-width: 560px) {
+    .common-home header {
+        position: static;
+    }
+
+    .banner7 {
+        display: none;
+    }
+
+    #cart .dropdown-menu {
+        right: -65px;
+    }
+    .box.box-right {
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo a {
+        font-size: 26px;
+    }
+
+    .logo-container {
+        width: 80%;
+    }
+
+    #logo h1 {
+        top: 11px;
+    }
+
+    .top-contacts {
+        margin-top: 15px;
+    }
+}
+
+/*media end*/

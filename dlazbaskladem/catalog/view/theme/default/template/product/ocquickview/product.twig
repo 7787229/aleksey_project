@@ -565,7 +565,7 @@
                 if (json['success']) {
                     $('#quickview-content').prepend('<div class="alert alert-success alert-dismissible">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-                    $('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+                    $('#cart > button').html('<span id="cart-total"><span class="txt_number">'+json['count']+'</span><span class="txt_items">Cart</span><span class="total-price">'+json['price']+'</span></span>');
 
                     $('#quickview-content').animate({ scrollTop: 0 }, 'slow');
 
