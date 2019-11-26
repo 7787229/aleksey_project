@@ -17,7 +17,7 @@ $_['entry_from_name']  = 'Ваше имя';
 $_['entry_from_email'] = 'Ваш Email';
 $_['entry_theme']      = 'Тема подарочного сертификата';
 $_['entry_message']    = 'Сообщение';
-$_['entry_amount']     = 'Сумма';
+$_['entry_amount']     = 'Сelkem bez DPH';
 
 // Help
 $_['help_message']     = 'Сообщение или поздавление для получателя сертификата (не обязательно)';

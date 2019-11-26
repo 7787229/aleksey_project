@@ -4211,4 +4211,76 @@ position: relative;
 .bootstrap-datetimepicker-widget .datepicker .prev,.bootstrap-datetimepicker-widget .datepicker .next {
 	padding:0 !important;
 }
+.product-info-main ul.list-unstyled li {
+	display: flex;
+	line-height: 24px;
+}
+.stock-box > span:nth-child(2){
+	display: inline-block;
+	margin-left: 35px;
+}
+.stock-box >span{
+	color: green !important;
 
+}
+.stock-box {
+	display: flex;
+	margin-bottom: 20px;
+}
+.price-label {
+	font-size: 16px !important;
+	display: inline-block;
+	margin-top: 16px;
+
+}
+.ex-label{
+	display: flex;
+	justify-content: space-between;
+	color: #999999;
+}
+.well-sm {
+	display: none;
+}
+.old-price {
+	margin-top: 14px;
+}
+.regular-price{
+	display: inline-block;
+	margin-top: 16px;
+}
+.col-har {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+.col-har:nth-child(2n){
+	background-color: #262626;
+	color: white;
+}
+.main-har {
+	display: flex;
+	flex-direction: column;
+	font-size: 17px;
+}
+.main-har strong {
+	text-align: center;
+	margin-bottom: 24px;
+}
+.special-price{
+	font-size: 20px !important;
+	margin-top: 14px;
+}
+.product-info-main .price-box{
+	display: flex;
+	justify-content: space-between;
+}
+.price{
+	font-size: 20px !important;
+}
+.min-q {
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 8px;
+	overflow-x: hidden;
+	width: 33px;
+}

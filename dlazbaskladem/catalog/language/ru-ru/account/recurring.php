@@ -12,7 +12,7 @@ $_['text_status']                          = 'Статус:';
 $_['text_payment_method']                  = 'Способ оплаты:';
 $_['text_order_id']                        = '№ заказа:';
 $_['text_product']                         = 'Товар:';
-$_['text_quantity']                        = 'Количество:';
+$_['text_quantity']                        = 'Množství:';
 $_['text_description']                     = 'Описание';
 $_['text_reference']                       = 'Связь';
 $_['text_transaction']                     = 'Транзакции';
@@ -39,7 +39,7 @@ $_['text_cancelled']                       = 'Периодический пла�
 // Column
 $_['column_date_added']                    = 'Создан';
 $_['column_type']                          = 'Тип';
-$_['column_amount']                        = 'Итого';
+$_['column_amount']                        = 'Celkem s DPH';
 $_['column_status']                        = 'Статус';
 $_['column_product']                       = 'Товар';
 $_['column_order_recurring_id']            = 'ID Профиля';

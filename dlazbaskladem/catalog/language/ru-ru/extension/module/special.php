@@ -3,5 +3,5 @@
 $_['heading_title'] = 'Акции';
 
 // Text
-$_['text_tax']      = 'Без НДС:';
+$_['text_tax']      = 'Сelkem bez DPH:';
 

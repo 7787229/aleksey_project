@@ -5,7 +5,7 @@ $_['heading_title']			   = 'Поиск транзакции';
 // Text
 $_['text_pp_express']		   = 'PayPal Экспресс-платежи';
 $_['text_date_search']		   = 'Поиск по дате';
-$_['text_searching']		   = 'Поиск';
+$_['text_searching']		   = 'Vyhledano';
 $_['text_name']				   = 'Имя';
 $_['text_buyer_info']		   = 'Информация о покупателе';
 $_['text_view']				   = 'Посмотреть';

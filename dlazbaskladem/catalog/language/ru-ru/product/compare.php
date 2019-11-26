@@ -5,9 +5,9 @@ $_['heading_title']     = 'Сравнение товаров';
 // Text
 $_['text_product']      = 'Описание';
 $_['text_name']         = 'Товар';
-$_['text_image']        = 'Изображение';
+$_['text_image']        = 'Obrázek';
 $_['text_price']        = 'Цена';
-$_['text_model']        = 'Модель';
+$_['text_model']        = 'Kód';
 $_['text_manufacturer'] = 'Производитель';
 $_['text_availability'] = 'Наличие';
 $_['text_instock']      = 'Есть на складе';

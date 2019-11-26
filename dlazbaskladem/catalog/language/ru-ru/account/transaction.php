@@ -5,7 +5,7 @@ $_['heading_title']      = 'История транзакций';
 // Column
 $_['column_date_added']  = 'Добавлено';
 $_['column_description'] = 'Описание';
-$_['column_amount']      = 'Сумма (%s)';
+$_['column_amount']      = 'Сelkem bez DPH (%s)';
 
 // Text
 $_['text_account']       = 'Личный Кабинет';

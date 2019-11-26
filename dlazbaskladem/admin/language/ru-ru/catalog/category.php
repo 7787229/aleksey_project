@@ -1,17 +1,17 @@
 <?php
 // Heading
-$_['heading_title']          = 'Категории';
+$_['heading_title']          = 'Kategorie';
 
 // Text
 $_['text_success']           = 'Настройки успешно изменены!';
-$_['text_list']              = 'Категории';
+$_['text_list']              = 'Kategorie';
 $_['text_add']               = 'Добавить';
 $_['text_edit']              = 'Редактирование';
 $_['text_default']           = 'Основной магазин';
 $_['text_keyword']           = 'Должно быть уникальным на всю систему и без пробелов.';
 
 // Column
-$_['column_name']            = 'Категории';
+$_['column_name']            = 'Kategorie';
 $_['column_sort_order']      = 'Порядок сортировки';
 $_['column_action']          = 'Действие';
 

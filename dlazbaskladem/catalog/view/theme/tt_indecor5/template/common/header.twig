@@ -107,7 +107,7 @@
   </style>
 {% endif %}
 </head>
-<body class="{{ class }} home1">
+<body class="{{ class }} home1 testGit">
 <div class="wrapper">
 <header>
 
@@ -195,3 +195,18 @@
 		</div>
 </header>
 
+	<script>
+		$(function(){
+			$('.open-map1').click(function () {
+				$('.gmaps.item1').show();
+				$('.gmaps.item2').hide();
+			})
+
+			$('.open-map2').click(function () {
+				$('.gmaps.item2').show();
+				$('.gmaps.item1').hide();
+			})
+		});
+
+
+	</script>

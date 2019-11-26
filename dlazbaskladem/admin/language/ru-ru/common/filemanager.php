@@ -8,7 +8,7 @@ $_['text_directory']   = 'Готово: Директория создана!';
 $_['text_delete']      = 'Файл или директория удалена!';
 
 // Entry
-$_['entry_search']     = 'Поиск..';
+$_['entry_search']     = 'Vyhledano..';
 $_['entry_folder']     = 'Новая папка';
 
 // Error

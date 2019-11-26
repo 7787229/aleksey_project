@@ -3,6 +3,8 @@ class ControllerProductProduct extends Controller {
 	private $error = array();
 
 	public function index() {
+        $this->load->model('setting/setting');
+        $this->load->model('setting/module');
 		$this->load->language('product/product');
 
 		$data['breadcrumbs'] = array();
@@ -377,9 +379,16 @@ class ControllerProductProduct extends Controller {
 
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
-			$data['products'] = array();
+            $featured_product_ids =$this->model_setting_module->getModule(335)['product'];
 
-			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+
+			$data['products'] = array();
+            $results = array();
+			foreach ($featured_product_ids as $id_prod){
+                $results[] = $this->model_catalog_product->getProduct($id_prod);
+            }
+
+			//$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 			
 			foreach ($results as $result) {
 				if ($result['image']) {

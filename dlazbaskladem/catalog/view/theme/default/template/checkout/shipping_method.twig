@@ -2,12 +2,16 @@
 <div class="alert alert-warning alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
 {% endif %}
 {% if shipping_methods %}
-<p>{{ text_shipping_method }}</p>
+  <p><b>Nabízené zboží je skladem, objednávku spracujeme, zabalíme a pripravime pro vyzvednutí.</b></p>
+  <p><b>Výdejní místo se nachází ve Velvarech v arealu Velvana a.s. (Za Roudnickou branou 27324).</b></p>
+  <p>
+  <b>Při nákupu nad 40 m2 mužete požadat o dopravu po Praze zdarma. Nabídka je limitovaná pro Prahu.</b>
+</p>
 {% for shipping_method in shipping_methods %}
-<p><strong>{{ shipping_method.title }}</strong></p>
+
 {% if not shipping_method.error %}
 {% for quote in shipping_method.quote %}
-<div class="radio">
+<div class="radio hidden">
   <label> {% if quote.code == code or not code %}
     {% set code = quote.code %}
     <input type="radio" name="shipping_method" value="{{ quote.code }}" checked="checked" />
@@ -22,7 +26,7 @@
 {% endif %}
 {% endfor %}
 {% endif %}
-<p><strong>{{ text_comments }}</strong></p>
+<p>Poznámka pro prodejce:</p>
 <p>
   <textarea name="comment" rows="8" class="form-control">{{ comment }}</textarea>
 </p>

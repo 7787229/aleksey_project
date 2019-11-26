@@ -170,7 +170,7 @@ class ControllerCheckoutGuest extends Controller {
 			}
 
 			if ((utf8_strlen($this->request->post['email']) > 96) || !filter_var($this->request->post['email'], FILTER_VALIDATE_EMAIL)) {
-				$json['error']['email'] = $this->language->get('error_email');
+				$json['error']['email'] = ' ';
 			}
 
 			if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
@@ -190,9 +190,9 @@ class ControllerCheckoutGuest extends Controller {
 
 			$country_info = $this->model_localisation_country->getCountry($this->request->post['country_id']);
 
-//			if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
-//				$json['error']['postcode'] = $this->language->get('error_postcode');
-//			}
+			if ($country_info && $country_info['postcode_required'] && (utf8_strlen(trim($this->request->post['postcode'])) < 2 || utf8_strlen(trim($this->request->post['postcode'])) > 10)) {
+				$json['error']['postcode'] = $this->language->get('error_postcode');
+			}
 
 //			if ($this->request->post['country_id'] == '') {
 //				$json['error']['country'] = $this->language->get('error_country');

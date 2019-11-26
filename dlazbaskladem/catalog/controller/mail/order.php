@@ -119,7 +119,6 @@ class ControllerMailOrder extends Controller {
 		} else {
 			$data['comment'] = '';
 		}
-
 		if ($order_info['payment_address_format']) {
 			$format = $order_info['payment_address_format'];
 		} else {

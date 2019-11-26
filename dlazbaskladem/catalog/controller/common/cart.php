@@ -129,7 +129,6 @@ class ControllerCommonCart extends Controller {
 				'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
 			);
 		}
-
 		$data['cart'] = $this->url->link('checkout/cart');
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 

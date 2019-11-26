@@ -22,12 +22,12 @@ $_['text_error']            = 'Запрошенный заказ не найде
 // Column
 $_['column_order_id']       = '№ Заказа';
 $_['column_customer']       = 'Клиент';
-$_['column_product']        = 'Количество';
+$_['column_product']        = 'Množství';
 $_['column_name']           = 'Название товара';
-$_['column_model']          = 'Модель';
-$_['column_quantity']       = 'Количество';
+$_['column_model']          = 'Kód';
+$_['column_quantity']       = 'Množství';
 $_['column_price']          = 'Цена';
-$_['column_total']          = 'Всего';
+$_['column_total']          = 'Сelkem';
 $_['column_action']         = 'Действие';
 $_['column_date_added']     = 'Добавлено';
 $_['column_status']         = 'Статус';
