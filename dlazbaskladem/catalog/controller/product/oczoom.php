@@ -15,13 +15,13 @@ class ControllerProductOczoom extends Controller
 
             $this->load->model('tool/image');
 
-            // if ($product_info['image']) {
-                // $data['images'][] = array(
-                    // 'src' => $this->model_tool_image->resize($product_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_height'))
-                // );
+             if ($product_info['image']) {
+                 $data['images'][] = array(
+                     'src' => $this->model_tool_image->resize($product_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_thumb_height'))
+                 );
 
-                // $data['has_images'] = true;
-            // }
+                 $data['has_images'] = true;
+             }
 
             $results = $this->model_catalog_product->getProductImages($product_id);
 

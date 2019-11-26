@@ -476,6 +476,22 @@ div#information-information {
 }
 
 @media (max-width: 560px) {
+    .text-home{
+        display: none;
+    }
+    .product-special h2{
+        display: none;
+    }
+    header{margin-bottom: 0;}
+    .breadcrumbs {
+        margin: 0;
+    }
+
+
+
+    .toolbar.toolbar-products {
+        margin: 0;
+    }
     .common-home header {
         position: static;
     }
