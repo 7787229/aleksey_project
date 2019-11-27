@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']                  = 'Pokračovat';
+$_['heading_title']                  = 'Dokončit Objednávku';
 
 // Text
 $_['text_cart']                      = 'Košík';

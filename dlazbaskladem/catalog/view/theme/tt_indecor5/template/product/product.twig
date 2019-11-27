@@ -191,7 +191,8 @@
 						
                     </ul>
 					<p class="short-des">{{ short_description }}</p>
-                    <li class="stock-box">{{ text_stock }} <span class="{{ isstock==true ? 'available' : 'noavailable' }}">{{ stock }} </span><span>></span><span class="min-q">  {{ minimum }} </span><span class="min-m">m2</span></li>
+
+                    <li class="stock-box">{{ text_stock }} <span class="{{ isstock==true ? 'available' : 'noavailable' }}">{{ stock }} </span><span>=</span><span class="min-q">  {{rquantity }} </span><span class="min-m">m2</span></li>
                     {% if tax %}
                         <div class="ex-label">
                             <span class="cena-b">Cena bez DPH:</span>

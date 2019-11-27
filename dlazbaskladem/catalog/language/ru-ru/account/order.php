@@ -7,7 +7,7 @@ $_['text_account']          = 'Личный Кабинет';
 $_['text_order']            = 'Заказ';
 $_['text_order_detail']     = 'Детали заказа';
 $_['text_invoice_no']       = '№ Счета';
-$_['text_order_id']         = '№ Заказа';
+$_['text_order_id']         = 'Číslo objednávky:';
 $_['text_date_added']       = 'Добавлено';
 $_['text_shipping_address'] = 'Адрес доставки';
 $_['text_shipping_method']  = 'Способ доставки';
@@ -20,7 +20,7 @@ $_['text_empty']            = 'Вы еще не совершали покупо�
 $_['text_error']            = 'Запрошенный заказ не найден!';
 
 // Column
-$_['column_order_id']       = '№ Заказа';
+$_['column_order_id']       = 'Číslo objednávky:';
 $_['column_customer']       = 'Клиент';
 $_['column_product']        = 'Množství';
 $_['column_name']           = 'Название товара';

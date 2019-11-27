@@ -122,7 +122,7 @@ class ControllerMailOrder extends Controller {
 		if ($order_info['payment_address_format']) {
 			$format = $order_info['payment_address_format'];
 		} else {
-			$format = '{firstname} {lastname}' . "\n" . '{company}' . "\n" . '{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone}' . "\n" . '{country}';
+			$format = 'Jméno : {firstname}'. "\n" . 'Ulice a číslo popisné: {lastname}' . "\n" . 'IČO: {company}' . "\n" . 'Město: {address_1}' . "\n" . 'DIČ: {address_2}' . "\n" . '{city} PSČ: {postcode}' . "\n" . '{zone}' . "\n";
 		}
 
 		$find = array(
@@ -156,7 +156,7 @@ class ControllerMailOrder extends Controller {
 		if ($order_info['shipping_address_format']) {
 			$format = $order_info['shipping_address_format'];
 		} else {
-			$format = '{firstname} {lastname}' . "\n" . '{company}' . "\n" . '{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone}' . "\n" . '{country}';
+            $format = 'Jméno : {firstname}'. "\n" . 'Ulice a číslo popisné: {lastname}' . "\n" . 'IČO: {company}' . "\n" . 'Město: {address_1}' . "\n" . 'DIČ: {address_2}' . "\n" . '{city} PSČ: {postcode}' . "\n" . '{zone}' . "\n";
 		}
 
 		$find = array(

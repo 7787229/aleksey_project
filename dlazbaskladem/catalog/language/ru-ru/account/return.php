@@ -12,7 +12,7 @@ $_['text_product']       = 'Информация о товаре';
 $_['text_reason']        = 'Информация о причине возврата';
 $_['text_message']       = '<p>Вы отправили запрос на возврат.</p><p> Уведомления о статусе запроса вы получите на ваш e-mail. Спасибо!</p>';
 $_['text_return_id']     = '№ Запроса на возврат';
-$_['text_order_id']      = '№ Заказа';
+$_['text_order_id']      = 'Číslo objednávky:';
 $_['text_date_ordered']  = 'Дата заказа';
 $_['text_status']        = 'Статус';
 $_['text_date_added']    = 'Добавлено';
@@ -23,7 +23,7 @@ $_['text_agree']         = 'Я прочитал <a href="%s" class="agree"><b>%s
 
 // Column
 $_['column_return_id']   = '№ Запроса на возврат';
-$_['column_order_id']    = '№ Заказа';
+$_['column_order_id']    = 'Číslo objednávky:';
 $_['column_status']      = 'Статус';
 $_['column_date_added']  = 'Добавлено';
 $_['column_customer']    = 'Клиент';
@@ -37,7 +37,7 @@ $_['column_reason']      = 'Причина';
 $_['column_action']      = 'Действие';
 
 // Entry
-$_['entry_order_id']     = '№ Заказа';
+$_['entry_order_id']     = 'Číslo objednávky:';
 $_['entry_date_ordered'] = 'Дата заказа';
 $_['entry_firstname']    = 'Имя';
 $_['entry_lastname']     = 'Фамилия';
