@@ -646,21 +646,21 @@
     });
     //--></script>
 <script type="text/javascript"><!--
-    $('.date').datetimepicker({
-        language: '{{ datepicker }}',
-        pickTime: false
-    });
+    {#$('.date').datetimepicker({#}
+    {#    language: '{{ datepicker }}',#}
+    {#    pickTime: false#}
+    {#});#}
 
-    $('.datetime').datetimepicker({
-        language: '{{ datepicker }}',
-        pickDate: true,
-        pickTime: true
-    });
+    {#$('.datetime').datetimepicker({#}
+    {#    language: '{{ datepicker }}',#}
+    {#    pickDate: true,#}
+    {#    pickTime: true#}
+    {#});#}
 
-    $('.time').datetimepicker({
-        language: '{{ datepicker }}',
-        pickDate: false
-    });
+    {#$('.time').datetimepicker({#}
+    {#    language: '{{ datepicker }}',#}
+    {#    pickDate: false#}
+    {#});#}
 
     $('button[id^=\'button-upload\']').on('click', function() {
         var node = this;
