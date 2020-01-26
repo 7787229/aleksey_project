@@ -18,9 +18,9 @@
 </div>
 {% endfor %}
 {% endif %}
-<p><strong>{{ text_comments }}</strong></p>
+<p class="hidden"><strong>{{ text_comments }}</strong></p>
 <p>
-  <textarea name="comment" rows="8" class="form-control">{{ comment }}</textarea>
+  <textarea  name="comment" rows="8" class="form-control hidden">{{ comment }}</textarea>
 </p>
 {% if text_agree %}
 <div class="buttons">

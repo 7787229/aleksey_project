@@ -774,6 +774,29 @@ class ControllerCatalogProduct extends Controller {
 			$data['minimum'] = 1;
 		}
 
+		if (isset($this->request->post['maximum_order'])) {
+			$data['maximum_order'] = $this->request->post['maximum_order'];
+		} elseif (!empty($product_info)) {
+			$data['maximum_order'] = $product_info['maximum_order'];
+		} else {
+			$data['maximum_order'] = '';
+		}
+		if (isset($this->request->post['order_step'])) {
+			$data['order_step'] = $this->request->post['order_step'];
+		} elseif (!empty($product_info)) {
+			$data['order_step'] = $product_info['order_step'];
+		} else {
+			$data['order_step'] = 1;
+		}
+		if (isset($this->request->post['maximum_variant'])) {
+			$data['maximum_variant'] = $this->request->post['maximum_variant'];
+		} elseif (!empty($product_info)) {
+			$data['maximum_variant'] = $product_info['maximum_variant'];
+		} else {
+			$data['maximum_variant'] = 1;
+		}
+		
+
 		if (isset($this->request->post['subtract'])) {
 			$data['subtract'] = $this->request->post['subtract'];
 		} elseif (!empty($product_info)) {

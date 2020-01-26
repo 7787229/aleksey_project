@@ -101,7 +101,8 @@ class ControllerCommonCart extends Controller {
 				'model'     => $product['model'],
 				'option'    => $option_data,
 				'recurring' => ($product['recurring'] ? $product['recurring']['name'] : ''),
-				'quantity'  => $product['quantity'],
+				'quantity'  => rtrim(rtrim($product['quantity'], '0'), '.'),
+
 				'price'     => $price,
 				'total'     => $total,
 				'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])

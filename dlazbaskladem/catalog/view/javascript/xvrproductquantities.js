@@ -1,10 +1,11 @@
 // Действия при нажатии кнопки ПЛЮС
 var xvrPlus = function (oldValueXVR, newValueXVR, stepValueXVR, minValueXVR, maxValueXVR, quantityInStock, textAlertMinimum, textAlertMaximumOrder, textAlertQuantityInStock, textAlertQuantityInOrder, textAlertOrderNotAvailable, textCheckForNumber, xvrPmVminusStatus) {
+	console.log(maxValueXVR/1000);
 	if(isNaN(oldValueXVR) == false) {
 		if (xvrPmVminusStatus == 1) {
 			if (oldValueXVR == 0 && quantityInStock < minValueXVR)
 			{
-				xvrModalAlert(textAlertOrderNotAvailable + '<br><br>' + textAlertQuantityInOrder + oldValueXVR/1000 + '<br><br>' + textAlertQuantityInStock + quantityInStock/1000);
+				console.log(xvrModalAlert(textAlertOrderNotAvailable + '<br><br>' + textAlertQuantityInOrder + oldValueXVR/1000 + '<br><br>' + textAlertQuantityInStock + quantityInStock/1000));
 				return oldValueXVR;
 			} else {
 				newValueXVR = minValueXVR;
@@ -23,12 +24,12 @@ var xvrPlus = function (oldValueXVR, newValueXVR, stepValueXVR, minValueXVR, max
 					{
 						newValueXVR = newValueXVR + stepValueXVR;
 					};
-					xvrModalAlert('Dostupné množství pro objednání: ' + newValueXVR/1000 + '<br><br>' + 'Zbývá na skladě: ' + quantityInStock/1000);
+					console.log(xvrModalAlert('Dostupné množství pro objednání: ' + newValueXVR/1000 + '<br><br>' + 'Zbývá na skladě: ' + quantityInStock/1000));
 				}
 				if (newValueXVR > maxValueXVR && maxValueXVR <= quantityInStock)
 				{
 					newValueXVR = maxValueXVR;
-					xvrModalAlert(textAlertMaximumOrder + maxValueXVR/1000);
+					xvrModalAlert('Maximální množství pro objednán: ' + maxValueXVR/1000 +'<br>Po přidání požadovaného množství (m2) kliknete na tlačítko aktualizovat.');
 				}
 				if (newValueXVR > maxValueXVR && maxValueXVR > quantityInStock)
 				{
@@ -154,7 +155,17 @@ var xvrMinus = function (oldValueXVR, newValueXVR, stepValueXVR, minValueXVR, ma
 // Выводим окно сообщения о возможном количестве товара для заказа
 var xvrModalAlert = function (data) {
 	$('#modal-cart').remove();
+	var res = data.length;
+	if ( res == 12 || res == 10 || res == 14){
+		console.log('very big data');
+		var re ='marinamarina';
 
+		console.log(re.slice(6));
+		data.slice(6);
+
+	}else{
+
+	console.log(data.length);
 	html  = '<div id="modal-cart" class="modal fade" data-backdrop="static">';
 	html += 	'<div class="modal-dialog">';
 	html +=			'<div class="modal-content">';
@@ -162,7 +173,7 @@ var xvrModalAlert = function (data) {
 //html +=					'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
 	html +=				'</div>';
 	html +=				'<div class="modal-body" id="ModalAlert_1_body">';
-	html +=					data;
+	html +=					data ;
 	html +=				'</div>';
 	html +=				'<div class="modal-footer" id="ModalAlert_1_footer">';
 	html +=					'<button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Ок</button>';
@@ -174,6 +185,7 @@ var xvrModalAlert = function (data) {
 
 	$('html body').append(html);
 	$('#modal-cart').modal('show');
+	}
 }
 
 
@@ -195,7 +207,11 @@ var xvrCheckForCorrectInput = function () {
 	var textAlertOror = $('#product input[name=\'text_alert_oror\']').val();
 	var textCheckForNumber = $('#product input[name=\'text_check_for_number\']').val();
 	var xvrPmVminusStatus = $('#product input[name=\'xvr_pm_vminus_status\']').val();
+	console.log(maxValueXVR/1000);
 	if (stepValueXVR == 0) {stepValueXVR = 1*1000;} else {};
+
+
+
 	if (maxValueXVR == 0) {maxValueXVR = Infinity;} else {};
 	if (quantityInStock == 0 && xvrPmVminusStatus == 1) {oldValueXVR = 0;} else {};
 
@@ -331,6 +347,7 @@ var xvrCheckForCorrectInputOther = function (product_id, oldValueXVR, newValueXV
 	minValueXVR = Math.round((parseFloat(minValueXVR)*1000).toFixed(0));
 	maxValueXVR = Math.round((parseFloat(maxValueXVR)*1000).toFixed(0));
 	quantityInStock = Math.round((parseFloat(quantityInStock)*1000).toFixed(0));
+
 	if (stepValueXVR == 0) {stepValueXVR = 1*1000;} else {};
 	if (maxValueXVR == 0) {maxValueXVR = Infinity;} else {};
 	if (quantityInStock == 0 && xvrPmVminusStatus == 1) {oldValueXVR = 0;} else {};

@@ -36,7 +36,7 @@ $_['column_price']             = 'Cena za m2';
 $_['column_total']             = 'Celkem s DPH';
 
 // Error
-$_['error_stock']              = 'Товары отмеченные *** отсутствуют в нужном количестве или их нет на складе!';
+$_['error_stock']              = 'Položky označené *** nejsou k dispozici v požadovaném množství nebo nejsou skladem!';
 $_['error_minimum']            = 'Minimalni mnozstvi pro objednani je:  <span class="hidden">%s</span> %s! <br> Po přidání požadovaného množství (m2) kliknete na tlačítko aktualizovat.';
 $_['error_required']           = '%s обязательно!';
 $_['error_product']            = 'В вашей корзине нет товаров!';

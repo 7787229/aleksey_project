@@ -106,9 +106,32 @@
     {% endif %}
   </style>
 {% endif %}
+    <script>
+
+        $(window).on('load', function () {
+            var $preloader = $('#cube-loader');
+
+            $preloader.fadeOut('slow');
+            $('.wrapper').css('display', 'block');
+        });
+    </script>
 </head>
+
 <body class="{{ class }} home1 testGit">
-<div class="wrapper">
+
+    <div id="cube-loader">
+        <div class="caption">
+            <div class="cube-loader">
+                <div class="cube loader-1"></div>
+                <div class="cube loader-2"></div>
+                <div class="cube loader-4"></div>
+                <div class="cube loader-3"></div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="wrapper" style="display:none;">
 <header>
 
 	<div class="header-top"></div>

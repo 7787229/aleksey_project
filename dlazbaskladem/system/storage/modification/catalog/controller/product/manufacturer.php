@@ -67,6 +67,11 @@ class ControllerProductManufacturer extends Controller {
 
 		$this->load->model('catalog/product');
 
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_product->LoadSettingsModul();
+			$data['xvr_pm_other_status'] = $this->model_catalog_product->LoadSettingsOther();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_product->LoadSettingsVminus();
+			
+
 		$this->load->model('tool/image');
 
 		if (isset($this->request->get['manufacturer_id'])) {
@@ -274,6 +279,11 @@ class ControllerProductManufacturer extends Controller {
 					'tags'		=> $pro_tags,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+ 
+			'quantity'       => $result['quantity'],
+ 			'maximum_order'  => $result['maximum_order'],
+			'order_step'     => $result['order_step'],
+			
 					'rating'      => $result['rating'],
 
 				'is_new'      => $is_new,

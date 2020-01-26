@@ -1332,7 +1332,9 @@ header .btn-group .dropdown-menu .item-selected{
 	opacity: 0;
 	visibility: hidden;
 	right: 0;
-	left: 0;
+	width: 20%;
+
+	left: 37%;
 	z-index: 3;
 	top: 50%;
 	-moz-transform: translateY(-50%);
@@ -1479,7 +1481,7 @@ header .btn-group .dropdown-menu .item-selected{
 	display: none;
 }
 .price-box .price {
-	color: #ff7a5f;
+	color: red;
 	font-size: 16px;
 	font-weight: 500;
 	

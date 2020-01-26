@@ -3,7 +3,7 @@
 $_['text_information']  = 'O SPOLEČNOSTI';
 $_['text_service']      = 'Служба поддержки';
 $_['text_extra']        = 'Дополнительно';
-$_['text_contact']      = 'KONTAKTY';
+$_['text_contact']      = 'Kontakty';
 $_['text_return']       = 'Возврат товара';
 $_['text_sitemap']      = 'Mapa Stránek';
 $_['text_manufacturer'] = 'Производители';

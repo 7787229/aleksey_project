@@ -20,7 +20,7 @@ $_['text_note']                = '<span style="color: #FF0000;">Примечан
 $_['text_success']             = 'Спасибо за ваш отзыв. Он поступил администратору для проверки на спам и вскоре будет опубликован.';
 $_['text_related']             = 'DOPORUČENÉ ZBOŽÍ';
 $_['text_tags']                = '<i class="fa fa-tags"></i>';
-$_['text_error']               = 'Товар не найден!';
+$_['text_error']               = 'Požadované zboží nebylo nalezeno!';
 $_['text_payment_recurring']   = 'Платежный профиль';
 $_['text_trial_description']   = 'Сумма: %s; Периодичность: %d %s; Кол-во платежей: %d, Далее ';
 $_['text_payment_description'] = 'Сумма: %s; Периодичность:  %d %s; Кол-во платежей:  %d ';

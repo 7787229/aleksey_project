@@ -15,7 +15,7 @@
             <div class="action">
                 <button class="button" type="button" onclick="ocajaxlogin.loginAction(document.getElementById('input-email').value, document.getElementById('input-password').value)"><span>{{ button_login }}</span></button>
                 <button class="button" type="button" onclick="ocajaxlogin.appendRegisterForm()"><span>{{ button_register_link }}</span></button>
-                <img class="ajax-load-img" alt="" src="{{ loader_img }}" width="30" height="30" />
+                <img class="ajax-load-img" alt="" src="https://dlazbaskladem.cz/image/catalog/AjaxLoader.gif" width="30" height="30" />
             </div>
             {% if redirect %}
             <input type="hidden" name="redirect" value="{{ redirect }}" />

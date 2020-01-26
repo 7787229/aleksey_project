@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_subject']          = '%s - Заказ %s';
+$_['text_subject']          = '%s - Číslo objednávky %s';
 $_['text_greeting']         = 'Děkujeme za Váš zájem o naši společnost  DLAZBA.SKLADEM a o naše produkty.';
 $_['text_link']             = 'Для просмотра Вашего заказа перейдите по ссылке:';
 $_['text_order_detail']     = 'Informace k Vaší objednávce';

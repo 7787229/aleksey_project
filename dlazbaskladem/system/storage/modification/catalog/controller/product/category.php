@@ -5,6 +5,11 @@ class ControllerProductCategory extends Controller {
 
 		$this->load->model('catalog/category');
 
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_category->LoadSettingsModul();
+			$data['xvr_pm_category_status'] = $this->model_catalog_category->LoadSettingsCategory();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_category->LoadSettingsVminus();
+			
+
 		$this->load->model('catalog/product');
 
 		$this->load->model('tool/image');
@@ -208,31 +213,31 @@ class ControllerProductCategory extends Controller {
                     'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.price&order=DESC' . $url
                 );
 
-//                if ($this->config->get('config_review_status')) {
-//                    $data['ajax_sorts'][] = array(
-//                        'text'  => $this->language->get('text_rating_desc'),
-//                        'value' => 'rating-DESC',
-//                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=DESC' . $url
-//                    );
-//
-//                    $data['ajax_sorts'][] = array(
-//                        'text'  => $this->language->get('text_rating_asc'),
-//                        'value' => 'rating-ASC',
-//                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=ASC' . $url
-//                    );
-//                }
-//
-//                $data['ajax_sorts'][] = array(
-//                    'text'  => $this->language->get('text_model_asc'),
-//                    'value' => 'p.model-ASC',
-//                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=ASC' . $url
-//                );
-//
-//                $data['ajax_sorts'][] = array(
-//                    'text'  => $this->language->get('text_model_desc'),
-//                    'value' => 'p.model-DESC',
-//                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=DESC' . $url
-//                );
+                if ($this->config->get('config_review_status')) {
+                    $data['ajax_sorts'][] = array(
+                        'text'  => $this->language->get('text_rating_desc'),
+                        'value' => 'rating-DESC',
+                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=DESC' . $url
+                    );
+
+                    $data['ajax_sorts'][] = array(
+                        'text'  => $this->language->get('text_rating_asc'),
+                        'value' => 'rating-ASC',
+                        'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=rating&order=ASC' . $url
+                    );
+                }
+
+                $data['ajax_sorts'][] = array(
+                    'text'  => $this->language->get('text_model_asc'),
+                    'value' => 'p.model-ASC',
+                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=ASC' . $url
+                );
+
+                $data['ajax_sorts'][] = array(
+                    'text'  => $this->language->get('text_model_desc'),
+                    'value' => 'p.model-DESC',
+                    'href'  => $base_url . 'index.php?route=product/ocfilter/category&path=' . $category_id . '&sort=p.model&order=DESC' . $url
+                );
 
                 $data['ajax_limits'] = array();
 
@@ -262,7 +267,7 @@ class ControllerProductCategory extends Controller {
 			);
 
 			if ($category_info['image']) {
-				$data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+				$data['thumb'] = $this->model_tool_image->resize($category_info['image'], 1600, 760);
 			} else {
 				$data['thumb'] = '';
 			}
@@ -538,7 +543,12 @@ class ControllerProductCategory extends Controller {
 					'rate_special' => $rate_special,
 					'tax'         => $tax,
 					'tags'		=> $pro_tags,
-					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+					
+			'minimum'        => $result['minimum'] > 0 ? $result['minimum'] : 1,
+			'maximum_order'  => $result['maximum_order'],
+			'order_step'     => $result['order_step'],
+			'quantity'       => $result['quantity'],
+			
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 				);
@@ -586,31 +596,7 @@ class ControllerProductCategory extends Controller {
 				'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . '&sort=p.price&order=DESC' . $url
 			);
 
-			if ($this->config->get('config_review_status')) {
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_desc'),
-					'value' => 'rating-DESC',
-					'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . '&sort=rating&order=DESC' . $url
-				);
 
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_asc'),
-					'value' => 'rating-ASC',
-					'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . '&sort=rating&order=ASC' . $url
-				);
-			}
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . '&sort=p.model&order=ASC' . $url
-			);
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_desc'),
-				'value' => 'p.model-DESC',
-				'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . '&sort=p.model&order=DESC' . $url
-			);
 
 			$url = '';
 
@@ -636,7 +622,7 @@ class ControllerProductCategory extends Controller {
 				$data['limits'][] = array(
 					'text'  => $value,
 					'value' => $value,
-					'href'  => $base_url . 'index.php?route=product/category&path=' . $category_id . $url . '&limit=' . $value
+					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&limit=' . $value)
 				);
 			}
 
@@ -671,7 +657,7 @@ class ControllerProductCategory extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $base_url . 'index.php?route=extension/module/oclayerednavigation/category&path=' . $category_id . $url . '&page={page}';
+			$pagination->url = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 
@@ -694,24 +680,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['sort'] = $sort;
 			$data['order'] = $order;
-			
-            /* Edit for Layered Navigation Ajax Module */
-            $module_status = $this->config->get('module_oclayerednavigation_status');
-            if($module_status) {
-                // $this->document->addScript('catalog/view/javascript/jquery/jquery-ui.min.js');
-                $this->document->addStyle('catalog/view/javascript/jquery/css/jquery-ui.min.css');
- 
-                if (file_exists(DIR_TEMPLATE . $this->config->get('theme_' . $this->config->get('config_theme') . '_directory') . '/stylesheet/opentheme/oclayerednavigation/css/oclayerednavigation.css')) {
-                    $this->document->addStyle('catalog/view/theme/' . $this->config->get('theme_' . $this->config->get('config_theme') . '_directory') . '/stylesheet/opentheme/oclayerednavigation/css/oclayerednavigation.css');
-                } else {
-                    $this->document->addStyle('catalog/view/theme/default/stylesheet/opentheme/oclayerednavigation/css/oclayerednavigation.css');
-                }
- 
-                $this->document->addScript('catalog/view/javascript/opentheme/oclayerednavigation/oclayerednavigation.js');
-            }
-
-
-            
+			$data['limit'] = $limit;
 
 			$data['continue'] = $this->url->link('common/home');
 
@@ -722,17 +691,7 @@ class ControllerProductCategory extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			
-            /* Edit for Layered Navigation Ajax Module */
-            if($module_status) {
-                $data['module_oclayerednavigation_loader_img'] = $base_url . 'image/' . $this->config->get('module_oclayerednavigation_loader_img');
- 
-                $this->response->setOutput($this->load->view('extension/module/oclayerednavigation/occategory', $data));
-            } else {
- 
-                $this->response->setOutput($this->load->view('product/category', $data));
-            }
-            
+			$this->response->setOutput($this->load->view('product/category', $data));
 		} else {
 			$url = '';
 

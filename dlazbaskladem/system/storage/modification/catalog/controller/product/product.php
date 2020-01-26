@@ -3,6 +3,8 @@ class ControllerProductProduct extends Controller {
 	private $error = array();
 
 	public function index() {
+        $this->load->model('setting/setting');
+        $this->load->model('setting/module');
 		$this->load->language('product/product');
 
 		$data['breadcrumbs'] = array();
@@ -156,6 +158,11 @@ class ControllerProductProduct extends Controller {
 
 		$this->load->model('catalog/product');
 
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_product->LoadSettingsModul();
+			$data['xvr_pm_product_status'] = $this->model_catalog_product->LoadSettingsProduct();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_product->LoadSettingsVminus();
+			
+
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
 		if ($product_info) {
@@ -234,6 +241,10 @@ class ControllerProductProduct extends Controller {
 			$data['heading_title'] = $product_info['name'];
 
 			$data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
+
+			$data['text_maximum_order'] = sprintf($this->language->get('text_maximum_order'), $product_info['maximum_order']);
+			$data['text_order_step'] = sprintf($this->language->get('text_order_step'), $product_info['order_step']);
+			
 			$data['text_login'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true));
 
 			$this->load->model('catalog/review');
@@ -251,8 +262,10 @@ class ControllerProductProduct extends Controller {
 				$data['short_description'] = utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..';
 			
 			$data['short_description'] = utf8_substr(trim(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8'))),0,$this->config->get('theme_' . $this->config->get('config_theme') . '_product_description_length')) . '..';
-			
+            $data['isstock']=true;
+            $data['rquantity'] = floor($product_info['quantity']);
 			if ($product_info['quantity'] <= 0) {
+                $data['isstock']=false;
 				$data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
 				$data['stock'] = $product_info['quantity'];
@@ -440,6 +453,11 @@ class ControllerProductProduct extends Controller {
 				$data['minimum'] = 1;
 			}
 
+			$data['order_step']    = $product_info['order_step'];
+			$data['maximum_order'] = $product_info['maximum_order'];
+			$data['quantity']      = $product_info['quantity'];
+			
+
 			$data['review_status'] = $this->config->get('config_review_status');
 
 			if ($this->config->get('config_review_guest') || $this->customer->isLogged()) {
@@ -468,7 +486,14 @@ class ControllerProductProduct extends Controller {
 
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
 
+            $featured_product_ids =$this->model_setting_module->getModule(335)['product'];
+
+
 			$data['products'] = array();
+            $results = array();
+			foreach ($featured_product_ids as $id_prod){
+                $results[] = $this->model_catalog_product->getProduct($id_prod);
+            }
 
 
 				/* Get new product */
@@ -486,7 +511,7 @@ class ControllerProductProduct extends Controller {
 				$new_results = $this->model_catalog_product->getProducts($filter_data);
 				/* End */
 			
-			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+			//$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
 			
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -602,9 +627,19 @@ class ControllerProductProduct extends Controller {
 				'manufacturer' => $result['manufacturer'],
 				'manufacturers' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id']),
 			
+
+			'order_step'    => $result['order_step'],
+			'maximum_order' => $result['maximum_order'],
+			'quantity'      => $result['quantity'],
+			
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
+
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_product->LoadSettingsModul();
+			$data['xvr_pm_featured_product_status'] = $this->model_catalog_product->LoadSettingsFeaturedProduct();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_product->LoadSettingsVminus();
+			
 
 			$data['tags'] = array();
 

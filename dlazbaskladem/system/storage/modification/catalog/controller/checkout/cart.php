@@ -65,8 +65,15 @@ class ControllerCheckoutCart extends Controller {
 
 			foreach ($products as $product) {
 				$product_total = 0;
+                if($product['order_step']==0){
+                    $quantity_box=round($product['quantity']);
+                } else{
+                    $quantity_box=round($product['quantity'] / $product['order_step']);
+                }
 
-				foreach ($products as $product_2) {
+
+
+                    foreach ($products as $product_2) {
 					if ($product_2['product_id'] == $product['product_id']) {
 						$product_total += $product_2['quantity'];
 					}
@@ -114,6 +121,7 @@ class ControllerCheckoutCart extends Controller {
 					$total = false;
 				}
 
+
 				$recurring = '';
 
 				if ($product['recurring']) {
@@ -144,14 +152,33 @@ class ControllerCheckoutCart extends Controller {
 					'option'    => $option_data,
 					'recurring' => $recurring,
 					'quantity'  => $product['quantity'],
+
+			'minimum'        => $product['minimum'],
+			'maximum_order'  => $product['maximum_order'],
+			'order_step'     => $product['order_step'],
+			'quantity_in_stock'  => $product['quantity_in_stock'],
+			
 					'stock'     => $product['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
-					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
+                    'minprice'     => $this->currency->format($product['price'], $this->session->data['currency']),
+                    'mintotal'     => $this->currency->format($product['total'], $this->session->data['currency']),
+					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id']),
+                    'quantity_box' => $quantity_box
 				);
-			}
 
+			$this->load->model('catalog/product');
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_product->LoadSettingsModul();
+			$data['xvr_pm_cart_status'] = $this->model_catalog_product->LoadSettingsCart();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_product->LoadSettingsVminus();
+			
+
+
+
+
+			}
+           
 			// Gift Voucher
 			$data['vouchers'] = array();
 
@@ -209,7 +236,6 @@ class ControllerCheckoutCart extends Controller {
 
 				array_multisort($sort_order, SORT_ASC, $totals);
 			}
-
 			$data['totals'] = array();
 
 			foreach ($totals as $total) {
@@ -219,7 +245,7 @@ class ControllerCheckoutCart extends Controller {
 				);
 			}
 
-			$data['continue'] = $this->url->link('common/home');
+			$data['continue'] = '/index.php?route=product/category&path=74';
 
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 
@@ -266,6 +292,7 @@ class ControllerCheckoutCart extends Controller {
 	}
 
 	public function add() {
+
 		$this->load->language('checkout/cart');
 
 		$json = array();
@@ -282,7 +309,7 @@ class ControllerCheckoutCart extends Controller {
 
 		if ($product_info) {
 			if (isset($this->request->post['quantity'])) {
-				$quantity = (int)$this->request->post['quantity'];
+				$quantity = $this->request->post['quantity'];
 			} else {
 				$quantity = 1;
 			}
@@ -375,8 +402,9 @@ class ControllerCheckoutCart extends Controller {
 
 					array_multisort($sort_order, SORT_ASC, $totals);
 				}
-
+                $json['count']=$this->cart->countProducts();
 				$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+				$json['price'] = sprintf($this->language->get('text_price'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
 			} else {
 				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
 			}
@@ -475,7 +503,9 @@ class ControllerCheckoutCart extends Controller {
 				array_multisort($sort_order, SORT_ASC, $totals);
 			}
 
-			$json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+            $json['count']=$this->cart->countProducts();
+            $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+            $json['price'] = sprintf($this->language->get('text_price'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
 		}
 
 		$this->response->addHeader('Content-Type: application/json');

@@ -186,6 +186,29 @@
                   <input type="text" name="minimum" value="{{ minimum }}" placeholder="{{ entry_minimum }}" id="input-minimum" class="form-control" />
                 </div>
               </div>
+
+	<!-- Максимальное количество товара в заказе -->			  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-maximum_order"><span data-toggle="tooltip" title="{{ help_maximum_order }}">{{ entry_maximum_order }}</span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="maximum_order" value="{{ maximum_order }}" placeholder="{{ entry_maximum_order }}" id="input-maximum_order" class="form-control" />
+                </div>
+              </div>
+	<!-- Шаг выбора количества в заказе -->			  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-order_step"><span data-toggle="tooltip" title="{{ help_order_step }}">{{ entry_order_step }}</span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="order_step" value="{{ order_step }}" placeholder="{{ entry_order_step }}" id="input-order_step" class="form-control" />
+                </div>
+              </div>
+	<!-- Максимальное число вариантов в списке выбора количества -->			  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-maximum_variant"><span data-toggle="tooltip" title="{{ help_maximum_variant }}">{{ entry_maximum_variant }}</span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="maximum_variant" value="{{ maximum_variant }}" placeholder="{{ entry_maximum_variant }}" id="input-maximum_variant" class="form-control" />
+                </div>
+              </div>
+			  
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-subtract">{{ entry_subtract }}</label>
                 <div class="col-sm-10">

@@ -7,6 +7,11 @@ class ControllerProductSearch extends Controller {
 
 		$this->load->model('catalog/product');
 
+			$data['module_xvrproductquantities_status'] = $this->model_catalog_product->LoadSettingsModul();
+			$data['xvr_pm_other_status'] = $this->model_catalog_product->LoadSettingsOther();
+			$data['xvr_pm_vminus_status'] = $this->model_catalog_product->LoadSettingsVminus();
+			
+
 		$this->load->model('tool/image');
 
 		if (isset($this->request->get['search'])) {
@@ -311,6 +316,11 @@ class ControllerProductSearch extends Controller {
 					'tags'		=> $pro_tags,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+ 
+			'quantity'       => $result['quantity'],
+ 			'maximum_order'  => $result['maximum_order'],
+			'order_step'     => $result['order_step'],
+			
 					'rating'      => $result['rating'],
 
 				'is_new'      => $is_new,
@@ -382,31 +392,6 @@ class ControllerProductSearch extends Controller {
 				'href'  => $this->url->link('product/search', 'sort=p.price&order=DESC' . $url)
 			);
 
-			if ($this->config->get('config_review_status')) {
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_desc'),
-					'value' => 'rating-DESC',
-					'href'  => $this->url->link('product/search', 'sort=rating&order=DESC' . $url)
-				);
-
-				$data['sorts'][] = array(
-					'text'  => $this->language->get('text_rating_asc'),
-					'value' => 'rating-ASC',
-					'href'  => $this->url->link('product/search', 'sort=rating&order=ASC' . $url)
-				);
-			}
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_asc'),
-				'value' => 'p.model-ASC',
-				'href'  => $this->url->link('product/search', 'sort=p.model&order=ASC' . $url)
-			);
-
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_model_desc'),
-				'value' => 'p.model-DESC',
-				'href'  => $this->url->link('product/search', 'sort=p.model&order=DESC' . $url)
-			);
 
 			$url = '';
 
